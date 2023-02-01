@@ -1,0 +1,21 @@
+.NavBar{
+    width: 100%;
+    height: var(--navbar-height);    
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.links{
+    display: flex;
+    float: right;
+    margin: 0 60px;
+}
+.links a{
+    text-decoration: none;
+    margin: 0 8px;
+}
+.links a:hover{
+    text-decoration: underline;
+}
