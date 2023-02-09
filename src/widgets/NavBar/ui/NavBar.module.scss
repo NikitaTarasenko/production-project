@@ -1,21 +1,25 @@
-.NavBar{
+.NavBar {
     width: 100%;
-    height: var(--navbar-height);    
+    height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    transition: 0.4s all ease-in-out;
+    padding-left: 20px;
 }
 
-.links{
+.links {
     display: flex;
     float: right;
     margin: 0 60px;
+    margin-left: auto;
 }
-.links a{
+
+.links a {
     text-decoration: none;
     margin: 0 8px;
 }
-.links a:hover{
+
+.links a:hover {
     text-decoration: underline;
 }
