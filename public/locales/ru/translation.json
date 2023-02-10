@@ -4,5 +4,9 @@
   "About page": "О нас",
   "Main page": "Главная",
   "Language": "English",
-  "Language2": "ланг2"
+  "Language2": "ланг2",
+  "toggle": "Переключить",
+  "NotFoundPage": "Не найдена страница...",
+  "Something went wrong": "Что-то пошло не так :(",
+  "RefreshPage": "Обновить страницу"
 }

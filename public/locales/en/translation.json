@@ -4,5 +4,9 @@
   "About page": "About us",
   "Main page": "Main",
   "Language": "Русский",
-  "Language2": "Lang2"
+  "Language2": "Lang2",
+  "toggle": "Toggle",
+  "NotFoundPage": "Not found page",
+  "Something went wrong": "Something went wrong :(",
+  "RefreshPage": "Refresh page"
 }
