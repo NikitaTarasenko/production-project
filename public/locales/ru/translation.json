@@ -8,5 +8,7 @@
   "toggle": "Переключить",
   "NotFoundPage": "Не найдена страница...",
   "Something went wrong": "Что-то пошло не так :(",
-  "RefreshPage": "Обновить страницу"
+  "RefreshPage": "Обновить страницу",
+  "Main": "Главная",
+  "About": "Главная"
 }
