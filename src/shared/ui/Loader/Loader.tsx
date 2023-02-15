@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import './Loader.scss';
+import './Loader.css';
 
 interface LoaderProps {
   className?: string;
