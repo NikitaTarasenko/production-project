@@ -8,7 +8,7 @@ on:
 jobs:
  pipeline:
   runs-on: windows-latest
-   strategy:
+  strategy:
       matrix:
       node-version: [ 17.x ]
 
