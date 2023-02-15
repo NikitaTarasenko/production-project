@@ -6,9 +6,9 @@ on:
     pull_request:
         branches: [master] 
 jobs:
- pipeline:
-   runs-on: windows-latest
-   strategy:
+  pipeline:
+    runs-on: windows-latest
+    strategy:
       matrix:
         node-version: [ 17.x ]
 
