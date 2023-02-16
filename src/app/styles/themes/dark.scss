@@ -1,8 +1,12 @@
-.app.dark {
-    --bg-color: rgb(5 5 34);
-    --inverted-bg-color: #e6e6e3;
-    --primary-color: #048604;
-    --secondary-color: rgb(1 70 1);
-    --inverted-primary-color: rgb(93 16 182);
-    --inverted-secondary-color: rgb(31 28 28);
+:root{  
+
+    --bg-color: var(--gray800);
+    --inverted-bg-color:var(--gray700);
+	--secondary-color: var(--blue900);
+	--primary-color: var(--blue700);
+    --inverted-primary-color:var(--white);
+    --inverted-secondary-color:#c4cddb;
+	--hover: var(--blue900);
+	--secondary-hover: var(--gray800);
+
 }

@@ -1,7 +1,8 @@
+/* eslint-disable i18next/no-literal-string */
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
-import LightIcon from 'shared/assets/icons/theme-light.svg';
-import DarkIcon from 'shared/assets/icons/theme-dark.svg';
+import Sun from 'shared/assets/icons/sun.svg';
+import Moon from 'shared/assets/icons/moon.svg';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
@@ -15,7 +16,11 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+            {theme === Theme.DARK ? (
+                <Moon width={30} fill="var(--inverted-secondary-color)" />
+            ) : (
+                <Sun width={30} fill="var(--inverted-secondary-color)" />
+            )}
         </Button>
     );
 };

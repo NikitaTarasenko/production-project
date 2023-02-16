@@ -1,8 +1,14 @@
-:root {
+.app.light   {
     --bg-color: #e6e6e3;
     --inverted-bg-color: rgb(5 5 34);
     --primary-color: rgb(93 16 182);
     --secondary-color: rgb(31 28 28);
     --inverted-primary-color: #048604;
     --inverted-secondary-color: rgb(1 70 1);
+    
+    --bg-color: var(--gray50);
+	--secondary-bg-color: var(--white);
+	--primary-color: var(--blue900);
+	--hover: var(--white);
+	--secondary-hover: var(--gray50);
 }

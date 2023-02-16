@@ -1,5 +1,7 @@
+/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import Language from 'shared/assets/icons/language.svg';
 import { Button, ThemeButton } from '../Button/Button';
 
 interface LangSwitcherProps {
@@ -18,8 +20,8 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             theme={ThemeButton.CLEAR}
             onClick={toggleLang}
         >
-
-            {t('Language')}
+            <Language width={30} fill="var(--inverted-secondary-color)" />
+            {/* {t('Language')} */}
         </Button>
     );
 };
