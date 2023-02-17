@@ -8,11 +8,25 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
+    .switchers{
+        flex-direction: column;
+    }
+    .lang {
+        margin-left: 0px;
+    }
+    .switchers{
+        bottom: 15px;
+    }
+    .links{
+        opacity: 0.1;
+        transform: translateX(-150px);
+    }
 }
 
 .switchers {
     position: absolute;
-    bottom: 20px;
+    bottom: 24px;
     right: 0;
     width: 100%;
     display: flex;
@@ -20,15 +34,30 @@
 }
 
 .lang {
+    transition: 0.3s all ease-in-out;
     margin-left: 20px;
 }
+ 
+ 
 .collapsedBtn{
     position: absolute;
-    bottom: 20px;
+    bottom: 20px;   
     right: 0;
     transform: translateX(99%);
 }
 
 .square{
     padding: 20px;
+}
+
+.links{
+    opacity:1;
+    transition: var(--base-transition);
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.link {
+    margin-bottom: 10px;
 }
