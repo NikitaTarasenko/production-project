@@ -5,6 +5,8 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import Main from 'shared/assets/icons/home.svg';
+import About from 'shared/assets/icons/list.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -24,19 +26,21 @@ export const Sidebar = ({ className }: SidebarProps) => {
         >
 
             <div className={cls.links}>
+
                 <AppLink
                     className={cls.link}
                     theme={AppLinkTheme.SECONDARY}
                     to="/"
                 >
-                    {t('Main')}
+                    { !collapsed ? t('Main') : <Main className={cls.icon} />}
                 </AppLink>
                 <AppLink
                     className={cls.link}
                     theme={AppLinkTheme.SECONDARY}
                     to="/about"
                 >
-                    {t('About')}
+                    { !collapsed ? t('About')
+                        : <About className={[cls.icon, cls.icon2].join(' ')} />}
                 </AppLink>
 
             </div>

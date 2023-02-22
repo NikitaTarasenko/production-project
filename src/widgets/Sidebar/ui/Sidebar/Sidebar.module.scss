@@ -1,26 +1,61 @@
 .Sidebar {
+    position: relative;
     height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background-color: var(--inverted-bg-color);
-    position: relative;
     transition: 0.4s all ease-in-out;
 }
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
-    .switchers{
+    .switchers {
         flex-direction: column;
     }
+
     .lang {
         margin-left: 0px;
     }
-    .switchers{
+
+    .switchers {
         bottom: 15px;
     }
-    .links{
-        opacity: 0.1;
+
+    .links {
         transform: translateX(-150px);
+        width: calc(100% + 110px);
+    }
+
+    .icon {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -37,27 +72,48 @@
     transition: 0.3s all ease-in-out;
     margin-left: 20px;
 }
- 
- 
-.collapsedBtn{
+
+
+.collapsedBtn {
     position: absolute;
-    bottom: 20px;   
+    bottom: 20px;
     right: 0;
     transform: translateX(99%);
 }
 
-.square{
+.square {
     padding: 20px;
 }
 
-.links{
-    opacity:1;
+.links {
     transition: var(--base-transition);
     display: flex;
     flex-direction: column;
     margin-left: 40px;
     margin-top: 10px;
+
 }
+
 .link {
+    width: 100%;
+    min-height: 15px;
     margin-bottom: 10px;
+
+}
+
+.icon {
+    opacity: 0;
+    fill: var(--inverted-primary-color);
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    -webkit-animation: .3s ease 0s normal forwards 1 fadein;
+    animation: .3s ease 0s normal forwards 1 fadein;
+
+}
+
+.icon2 {
+
+    top: 40px;
+
 }
