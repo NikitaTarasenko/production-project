@@ -7,13 +7,10 @@
     z-index: -1;
     opacity: 0;
     pointer-events: none;
-    color: var(--modal_font)
+    color: var(--modal_color);
 }
 
-.Modal.light{
-   --modal_color: rgb(27 27 60);
-   --modal_font: #12ab12;
-}
+ 
 .overlay {
     width: 100%;
     height: 100%;
@@ -28,7 +25,7 @@
 .content {
     padding: 20px;
     border-radius: 12px;
-    background-color: var( --modal_color);
+    background-color: var( --inverted-bg-color);
     transition: .3s all ease-in-out;
     transform: scale(0.5);
     max-width: 60%;

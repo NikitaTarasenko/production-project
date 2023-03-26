@@ -1,7 +1,7 @@
-.app.light   {
+.app_light_theme  {
     --bg-color: #e6e6e3;
     --inverted-bg-color: rgb(27 27 60);
-    --primary-color: var(--blue700);
+    --primary-color: var(--blue900);
     
     --inverted-primary-color: #12ab12;
     --inverted-secondary-color: #12ab12;
@@ -12,5 +12,5 @@
     // --secondary-color:var(--blue700);
 	--hover: var(--white);
 	--secondary-hover: var(--gray50);
-    --modal_color: rgb(27 27 60);
+    --modal_color: #12ab12;
 }
