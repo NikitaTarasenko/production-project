@@ -4,7 +4,7 @@
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
-    transition: 0.4s all ease-in-out;
+    transition:var(--base-transition);
     padding-left: 20px;
 }
 
