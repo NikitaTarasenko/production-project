@@ -21,5 +21,18 @@
 			"};"
 		],
 		"description": "fast component"
+	},
+	"test template": {
+		"scope": "javascript,typescript, typescriptreact",
+		"prefix": "tt",
+		"body": [
+			"describe('${1:$TM_FILENAME_BASE}', () => {",
+				"test('', () => {",
+				"expect().toEqual();",
+			"});",
+			"});"
+			
+		],
+		"description": "fast component"
 	}
 }
