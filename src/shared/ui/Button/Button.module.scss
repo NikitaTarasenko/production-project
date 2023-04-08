@@ -31,6 +31,14 @@
     border: none;
 }
 
+.background_inverted_outlined {
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+
+    border: 1px solid var(--inverted-primary-color);
+}
+
+
 .square {
     padding: 0;
 }
@@ -60,4 +68,8 @@
 
 .size_xl {
     font: var(--font-xl)
+}
+
+.disabled {
+    opacity: .5;
 }

@@ -12,7 +12,7 @@ const MainPage = () => {
     return (
         <div>
             {t('Main page')}
-            <Input placeholder="" type="text" value={value} onChange={onChange} />
+            <Input placeholder={t('Enter text')} type="text" value={value} onChange={onChange} />
         </div>
     );
 };

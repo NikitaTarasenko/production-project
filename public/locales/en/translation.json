@@ -12,5 +12,11 @@
   "Main": "Main",
   "About": "About",
   "Log in": "Log in",
-  "Login": "Login"
+  "Login": "Login",
+  "Enter text": "Enter text",
+  "Enter username": "Enter username",
+  "Enter password": "Enter password",
+  "Authorization form": "Authorization form",
+  "You entered wrong name or password": "You entered wrong name or password",
+  "Log out": "Log out"
 }
