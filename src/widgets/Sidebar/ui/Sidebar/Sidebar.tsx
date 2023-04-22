@@ -1,24 +1,37 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { memo, useState } from 'react';
+
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import Main from 'shared/assets/icons/home.svg';
-import About from 'shared/assets/icons/list.svg';
+import { SidebarItemList } from 'widgets/Sidebar/model/items';
 import cls from './Sidebar.module.scss';
+import { SideBarItem } from '../SideBarItem/SideBarItem';
 
 interface SidebarProps {
   className?: string;
 }
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed(!collapsed);
     };
+
+    // const itemList = useMemo(
+    //     () => (
+
+    //         SidebarItemList.map((item) => (
+    //             <SideBarItem
+    //                 item={item}
+    //                 collapsed={collapsed}
+    //                 key={item.path}
+    //             />
+
+    //         ))
+    //     ),
+    //     [collapsed],
+    // );
     return (
         <div
             data-testid="sidebar"
@@ -26,23 +39,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
         >
 
             <div className={cls.links}>
+                { SidebarItemList.map((item) => (
+                    <SideBarItem
+                        item={item}
+                        collapsed={collapsed}
+                        key={item.path}
+                    />
 
-                <AppLink
-                    className={cls.link}
-                    theme={AppLinkTheme.SECONDARY}
-                    to="/"
-                >
-                    { !collapsed ? t('Main') : <Main className={cls.icon} />}
-                </AppLink>
-                <AppLink
-                    className={cls.link}
-                    theme={AppLinkTheme.SECONDARY}
-                    to="/about"
-                >
-                    { !collapsed ? t('About')
-                        : <About className={[cls.icon, cls.icon2].join(' ')} />}
-                </AppLink>
-
+                ))}
             </div>
 
             <Button
@@ -62,4 +66,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </div>
         </div>
     );
-};
+});

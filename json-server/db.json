@@ -21,6 +21,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Nikita",
+    "lastName": "Tarasenko",
+    "age": 26,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Kyiv",
+    "username": "ghost",
+    "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg" 
   }
 }

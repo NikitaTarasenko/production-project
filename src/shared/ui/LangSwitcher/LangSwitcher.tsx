@@ -2,12 +2,14 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Language from 'shared/assets/icons/language.svg';
+import { memo } from 'react';
 import { Button, ThemeButton } from '../Button/Button';
 
 interface LangSwitcherProps {
   className?: string;
 }
-export const LangSwitcher = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [t, i18n] = useTranslation();
 
     const toggleLang = () => {
@@ -24,4 +26,4 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             {/* {t('Language')} */}
         </Button>
     );
-};
+});
