@@ -1,11 +1,10 @@
-/* eslint-disable i18next/no-literal-string */
 import { screen } from '@testing-library/react';
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@storybook/testing-library';
 import { Counter } from './Counter';
 
 describe('Counter', () => {
-    test('Test render', () => {
+    test('test render', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
@@ -20,7 +19,7 @@ describe('Counter', () => {
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
-    test('increment', () => {
+    test('decrement', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });

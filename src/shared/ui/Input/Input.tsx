@@ -10,7 +10,7 @@ interface InputProps extends HTMLInputProps {
   className?: string;
   value?: string;
   onChange?: (value: string) => void;
-  type: string;
+  type?: string;
   autoFocus?: boolean;
 
 }
@@ -27,7 +27,7 @@ export const Input = memo((props: InputProps) => {
     useEffect(() => {
         if (autoFocus) {
             setIsFocused(true);
-            ref.current.focus();
+            ref.current?.focus();
         }
     }, [autoFocus]);
 

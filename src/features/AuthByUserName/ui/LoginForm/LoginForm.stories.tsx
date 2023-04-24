@@ -34,6 +34,6 @@ Loading.args = {};
 
 Loading.decorators = [StoreDecorator({
     loginForm: {
-        username: '123', password: '1234', isLoading: true,
+        isLoading: true,
     },
 })];

@@ -19,5 +19,9 @@
   "Authorization form": "Форма авторизации",
   "You entered wrong name or password": "Вы ввели неправильный логин или пароль",
   "Log out": "Выйти",
-  "ProfilePage": "Профайл"
+  "ProfilePage": "Профайл",
+  "Profile": "Профиль",
+  "Edit": "Редактировать",
+  "Your name": "Ваше имя",
+  "Your lastname": "Ваша фамилия"
 }

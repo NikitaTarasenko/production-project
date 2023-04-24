@@ -4,12 +4,16 @@ import { ThunkConfig } from 'app/providers/StoreProvider';
 import { User, userActions } from 'entities/User';
 import { USER_LOCAL_STORAGE_KEY } from 'shared/const/localStorage';
 
-interface LoginByusername{
+interface LoginByusernameProps{
     username: string,
     password: string
 }
 // First, create the thunk
-export const loginByUsername = createAsyncThunk<User, LoginByusername, ThunkConfig<string>>(
+export const loginByUsername = createAsyncThunk<
+     User,
+     LoginByusernameProps,
+     ThunkConfig<string>
+>(
     'login/loginByUsername',
     async (authData, { extra, dispatch, rejectWithValue }) => {
         try {
@@ -21,7 +25,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByusername, ThunkConf
             localStorage.setItem(USER_LOCAL_STORAGE_KEY, JSON.stringify(response.data));
             dispatch(userActions.setAuthData(response.data));
 
-            extra.navigate('/about');
+            extra.navigate?.('/about');
             return response.data;
         } catch (e) {
             console.log(e);

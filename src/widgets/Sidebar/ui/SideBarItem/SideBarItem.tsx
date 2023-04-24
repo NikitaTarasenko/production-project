@@ -5,7 +5,7 @@ import { memo } from 'react';
 import cls from './SideBarItem.module.scss';
 
 interface SideBarItemProps {
-    item? : SidebarItemType;
+    item : SidebarItemType ;
     collapsed: boolean;
 }
 export const SideBarItem = memo(({ item, collapsed }: SideBarItemProps) => {

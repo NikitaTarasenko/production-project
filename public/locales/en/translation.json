@@ -19,5 +19,9 @@
   "Authorization form": "Authorization form",
   "You entered wrong name or password": "You entered wrong name or password",
   "Log out": "Log out",
-  "ProfilePage": "Profile"
+  "ProfilePage": "Profile",
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "Your name": "Your name",
+  "Your lastname": "Your lastname"
 }

@@ -30,6 +30,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'error',
+        'no-undef': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
