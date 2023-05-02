@@ -9,6 +9,7 @@
     width: 100%;
     color: transparent;
     text-shadow: 0 0 0 var(--modal_color);
+
     &:focus {
         outline: none;
     }
@@ -27,12 +28,16 @@
 .caret {
     height: 3px;
     width: 9px;
-    background-color:var(--modal_color);
+    background-color: var(--modal_color);
     bottom: 0;
     left: 0;
     position: absolute;
 
     animation: blink 0.7s forwards infinite;
+}
+
+.readOnly {
+    opacity: .4;
 }
 
 @keyframes blink {
@@ -48,5 +53,4 @@
     100% {
         opacity: 1;
     }
-
 }
