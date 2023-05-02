@@ -11,6 +11,12 @@
   "City": "Город",
   "Username": "Прозвище",
   "Avatar": "Введите ссылку для аватара ",
-  "profile.Select currency": "Укажите валюту",
-  "profile.Select country": "Укажите страну"
+  "Select currency": "Укажите валюту",
+  "Select country": "Укажите страну",
+  "Server error with saving": "Серверная ошибка при сохранении",
+  "Not entered age": "Некорректный возраст",
+  "Not entered firstname or lastname": "Неверные имя и фамилия",
+  "Not entered country": "Некорректный город",
+  "Not entered data": "Данные не указаны !",
+  "Not entered city": "Не введен город"
 }

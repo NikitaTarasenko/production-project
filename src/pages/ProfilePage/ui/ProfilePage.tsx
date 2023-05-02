@@ -1,13 +1,15 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     ProfileCard,
+    ValidateProfileError,
     fetchProfileData,
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
     getProfileReadonly,
+    getProfileValidateErrors,
     profileActions,
     profileReducer,
 } from 'entities/Profile';
@@ -16,6 +18,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 // import cls from './ProfilePage.module.scss';
@@ -27,7 +30,7 @@ interface ProfilePageProps {
   className?: string;
 }
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    // const { t } = useTranslation();
+    const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
@@ -35,9 +38,20 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const readonly = useSelector(getProfileReadonly);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [prevAgeState, setPrevAgeState] = useState<string | undefined>('');
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const validateErrorTranslates = {
+        [ValidateProfileError.SERVER_ERROR]: t('Server error with saving'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Not entered age'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Not entered firstname or lastname'),
+        [ValidateProfileError.INCORRECT_CITY]: t('Not entered city'),
+        [ValidateProfileError.NO_DATA]: t('Not entered data'),
+    };
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
@@ -83,6 +97,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors?.length && validateErrors.map((err) => (
+                    <Text key={err} theme={TextTheme.ERROR} text={validateErrorTranslates[err]} />
+                ))}
                 <ProfileCard
                     data={formData}
                     error={error}

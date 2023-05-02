@@ -11,6 +11,12 @@
   "City": "City",
   "Username": "Username",
   "Avatar": "Enter link for avatar",
-  "profile.Select currency": "Select currency",
-  "profile.Select country": "Select country"
+  "Select currency": "Select currency",
+  "Select country": "Select country",
+  "Server error with saving": "Server error with saving",
+  "Not entered age": "Incorrect age",
+  "Not entered firstname or lastname": "Incorrect firstname or lastname",
+  "Not entered country": "Not entered city",
+  "Not entered data": "Not entered data",
+  "Not entered city": "Not entered city"
 }
