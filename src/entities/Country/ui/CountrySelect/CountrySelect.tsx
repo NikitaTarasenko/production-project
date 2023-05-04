@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Modes, classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { Country } from 'entities/Country';
 import { memo, useCallback } from 'react';
-// import cls from './CurrencySelect.module.scss';
+import cls from './CountrySelect.module.scss';
 
 interface CountrySelectProps {
   className?: string;
@@ -28,9 +28,13 @@ export const CountrySelect = memo(({
         onChange?.(value as Country);
     }, [onChange]);
 
+    const mods: Modes = {
+        [cls.readonly]: readOnly,
+    };
+
     return (
         <Select
-            className={classNames('', {}, [className])}
+            className={classNames('', mods, [className])}
             label={t('Select country')}
             options={options}
             value={value}

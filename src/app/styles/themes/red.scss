@@ -1,0 +1,16 @@
+.app_dark_red {
+  
+    --inverted-bg-color: #862B23;
+    --primary-color: #862B23;
+    --secondary-color: #862B23;
+    --inverted-primary-color:#FBF4F4;
+    --inverted-secondary-color:#201e1e;
+    
+    --bg-color:#FBF4F4;
+	--secondary-bg-color: var(--white);
+ 
+    // --secondary-color:var(--blue700);
+	--hover: var(--white);
+	--secondary-hover: var(--gray50);
+    --modal_color: #2fb41a;
+}
