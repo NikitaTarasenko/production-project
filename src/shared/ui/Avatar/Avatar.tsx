@@ -5,9 +5,9 @@ import cls from './Avatar.module.scss';
 
 interface AvatarProps {
   className?: string;
-  src: string;
+  src?: string;
   size? : number;
-alt?: string;
+  alt?: string;
 }
 export const Avatar = ({
     className, src, size, alt,

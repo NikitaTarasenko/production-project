@@ -13,17 +13,18 @@
 			"import { classNames} from 'shared/lib/classNames/classNames';",
 			"import cls from './${1:$TM_FILENAME_BASE}.module.scss';",
 			"import { useTranslation } from 'react-i18next';",
+			"import { memo } from 'react';",
 			"",
 			"interface ${1:$TM_FILENAME_BASE}Props {",
 			"  className?: string;",
 			"}",
-			"export const ${1:$TM_FILENAME_BASE} = ({ className }: ${1:$TM_FILENAME_BASE}Props) => {",
+			"export const ${1:$TM_FILENAME_BASE} = memo(({ className }: ${1:$TM_FILENAME_BASE}Props) => {",
 			"const { t } = useTranslation();",
 			"",
 			" return <div className={classNames(cls.${1:$TM_FILENAME_BASE}, {}, [className])}>",
 			"",
 			"</div>;",
-			"};"
+			"});"
 		],
 		"description": "fast component"
 	},

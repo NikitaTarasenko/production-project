@@ -55,6 +55,7 @@
     right: 0;
     transform: translateX(99%);
     transition:var(--base-transition);
+    z-index: 1;
 }
 
 .square {
