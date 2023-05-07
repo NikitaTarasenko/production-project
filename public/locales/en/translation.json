@@ -3,8 +3,8 @@
   "Translate": "Translate",
   "About page": "About us",
   "Main page": "Main",
-  "Articles" : "Articles",
-  "Article details" : "Article details",
+  "Articles": "Articles",
+  "Article details": "Article details",
   "Language": "Русский",
   "Language2": "Lang2",
   "toggle": "Toggle",
@@ -21,7 +21,6 @@
   "Authorization form": "Authorization form",
   "You entered wrong name or password": "You entered wrong name or password",
   "ProfilePage": "Profile",
-  "Log out": "Log out"
-
-  
+  "Log out": "Log out",
+  "No comments": "No comments"
 }

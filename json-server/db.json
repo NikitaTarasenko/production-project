@@ -100,13 +100,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half-caption/public/field_blog_entry_images/2021-05/robert_sapolsky-edited.jpg?itok=wyTvL0CL"
     }
   ],
   "profile": {

@@ -3,8 +3,8 @@
   "Translate": "Перевод",
   "About page": "О нас",
   "Main page": "Главная",
-  "Articles" : "Статьи",
-  "Article details" : "Подробнее о статьях",
+  "Articles": "Статьи",
+  "Article details": "Подробнее о статьях",
   "Language": "English",
   "Language2": "ланг2",
   "toggle": "Переключить",
@@ -21,6 +21,6 @@
   "Authorization form": "Форма авторизации",
   "You entered wrong name or password": "Вы ввели неправильный логин или пароль",
   "ProfilePage": "Профайл",
-  "Log out": "Выйти"
- 
+  "Log out": "Выйти",
+  "No comments": "Комментарии отсутствуют"
 }
