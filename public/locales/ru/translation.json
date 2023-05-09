@@ -22,5 +22,7 @@
   "You entered wrong name or password": "Вы ввели неправильный логин или пароль",
   "ProfilePage": "Профайл",
   "Log out": "Выйти",
-  "No comments": "Комментарии отсутствуют"
+  "No comments": "Комментарии отсутствуют",
+  "Write your comment": "Введите текст комментария",
+  "Send": "Отправить"
 }

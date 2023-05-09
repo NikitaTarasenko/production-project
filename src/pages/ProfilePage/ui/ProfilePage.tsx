@@ -5,6 +5,7 @@ import {
     ProfileCard,
     ValidateProfileError,
     fetchProfileData,
+
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
@@ -19,6 +20,8 @@ import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useParams } from 'react-router-dom';
+
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 // import cls from './ProfilePage.module.scss';
@@ -39,6 +42,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [prevAgeState, setPrevAgeState] = useState<string | undefined>('');
     const validateErrors = useSelector(getProfileValidateErrors);
+    const { id } = useParams<{id: string}>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Server error with saving'),
@@ -50,9 +54,11 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+            if (id) {
+                dispatch(fetchProfileData(id));
+            }
         }
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));

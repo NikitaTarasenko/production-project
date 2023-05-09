@@ -93,6 +93,42 @@
       "text": "stunning...",
       "postId": "1",
       "userId": "1"
+    },
+    {
+      "postId": "1",
+      "userId": "1",
+      "text": "213",
+      "id": "ux7JNcU"
+    },
+    {
+      "postId": "1",
+      "userId": "2",
+      "text": "342",
+      "id": "tY9wmkw"
+    },
+    {
+      "postId": "1",
+      "userId": "2",
+      "text": "3",
+      "id": "sGcKIsC"
+    },
+    {
+      "postId": "1",
+      "userId": "2",
+      "text": "234",
+      "id": "35tiHSg"
+    },
+    {
+      "postId": "1",
+      "userId": "2",
+      "text": "4234",
+      "id": "oFUx8vo"
+    },
+    {
+      "postId": "1",
+      "userId": "1",
+      "text": "23",
+      "id": "gWhyGup"
     }
   ],
   "users": [
@@ -108,17 +144,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half-caption/public/field_blog_entry_images/2021-05/robert_sapolsky-edited.jpg?itok=wyTvL0CL"
+      "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
     }
   ],
-  "profile": {
-    "first": "Nikita",
-    "lastName": "Tarasenko",
-    "age": 22,
-    "currency": "UAH",
-    "country": "Ukraine",
-    "city": " 26",
-    "username": "ghost",
-    "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Nikita",
+      "lastName": "Tarasenko",
+      "age": 22,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": " Brovary",
+      "username": "ghost",
+      "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Patrick   ",
+      "lastName": "Bateman",
+      "age": 32,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": " Kyiv",
+      "username": "PSIH",
+      "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
+    }
+  ]
 }
