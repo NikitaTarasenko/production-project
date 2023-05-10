@@ -9,6 +9,7 @@
   "articles": [
     {
       "id": "1",
+      "userId" : "1",
       "title": "Illusion of free will",
       "subtitle": "This neuroscientist says your sense of free will is an illusion",
       "img": "https://news.stanford.edu/wp-content/uploads/2017/05/sapolsky_vert.jpg",
@@ -162,7 +163,7 @@
     {
       "id": "2",
       "first": "Patrick   ",
-      "lastName": "Bateman",
+      "lastName": "BatemaN",
       "age": 32,
       "currency": "UAH",
       "country": "Ukraine",
