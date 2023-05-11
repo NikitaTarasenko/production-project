@@ -25,14 +25,14 @@ const AddCommentForm = memo((props : AddCommentFormProps) => {
     const error = useSelector(getAddCommentFormError);
     const dispatch = useAppDispatch();
 
-    const onChange = useCallback((text:string) => {
+    const onCommentChange = useCallback((text:string) => {
         dispatch(addCommentFormActions.setText(text));
     }, [dispatch]);
 
     const onSendHandler = useCallback(() => {
         onSendComment(text || '');
-        onChange('');
-    }, [onChange, onSendComment, text]);
+        onCommentChange('');
+    }, [onCommentChange, onSendComment, text]);
     return (
         <DynamicModuleLoader reducers={reducers}>
             {error && <Text theme={TextTheme.ERROR} text={error} />}
@@ -41,7 +41,7 @@ const AddCommentForm = memo((props : AddCommentFormProps) => {
                     className={cls.input}
                     placeholder={t('Write your comment')}
                     value={text}
-                    onChange={onChange}
+                    onChange={onCommentChange}
                 />
                 <Button onClick={onSendHandler}>{t('Send')}</Button>
             </div>

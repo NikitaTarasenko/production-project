@@ -9,7 +9,7 @@
   "articles": [
     {
       "id": "1",
-      "userId" : "1",
+      "userId": "1",
       "title": "Illusion of free will",
       "subtitle": "This neuroscientist says your sense of free will is an illusion",
       "img": "https://news.stanford.edu/wp-content/uploads/2017/05/sapolsky_vert.jpg",
@@ -17,7 +17,7 @@
       "createdAt": "05.05.2033",
       "type": [
         "Psychology",
-        "philosophy"
+        "Biology "
       ],
       "blocks": [
         {
@@ -74,62 +74,169 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "title": "      12 Rules for Life: An Antidote to Chaos by Jordan B Peterson – digested read",
+      "subtitle": "This neuroscientist says your sense of free will is an illusion",
+      "img": "https://d2eehagpk5cl65.cloudfront.net/img/q60/uploads/2023/01/jordanpeterson_1161x653.jpg",
+      "views": 231234,
+      "createdAt": "11.05.2033",
+      "type": [
+        "Psychology",
+        "Philosophy"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "Just a few years ago, I was an unknown professor writing academic books that nobody read. Then, with God’s help, I decided to stop feeling sorry for myself and develop my potential. Pinkos and wishy-washy liberals had cornered the market in cod psychology, so I guessed there must be a huge hunger for a self-help book, backed up with religion, mythology, CAPITAL LETTERS and stating the obvious – one directed at responsible, socially minded conservatives craving some pseudointellectual ideology to prop up their beliefs. And bingo! Here are my 12 Rules for Life."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://gumlet.assettype.com/swarajya/2021-04/1cdebcce-e077-4621-8dd3-7102cb4f8e25/Beyond_Order_By_Jordan_Peterson.png",
+          "title": "Jordan Peterson's 'Beyond Order' – A Fascinating Paradox, Just Like Its Author"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "1 Stand up straight with your shoulders straight",
+          "paragraphs": [
+            "Most lobsters are complete bastards left to their own devices. Most humans are complete bastards left to their own devices. This proves there is a God who wants us to have Order. Order is Masculine and Chaos is Feminine. Therefore to move towards Order, we all need to man up. Happiness is pointless. We are all on this Earth to suffer. So learn to suffer like a man. Not everyone can be as rich and successful as me, but try to be less of a failure than you already are."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "title": "2 Treat yourself like someone you are responsible for helping",
+          "paragraphs": [
+            " The story of the Garden of Eden shows that we are all touched with Original Sin But you have a choice. You can either seek Heaven or be dragged down into Hell. Yes, you have a shameful, sinful nature but for God’s sake just make a bit of an effort. Stop waiting for other people to dig you out of your pitiful hole."
+          ]
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "3 Befriend people who want the best for you",
+          "paragraphs": [
+            "We are all Being. Just some of us are better Beings. Learn to tell the difference. Some people are beyond help. They are merely exploiting the willingness of good people to help them and, as Dostoyevsky rightly observes, will drag you down to their level. So stick with the winners. If people are determined to screw up, let them. They are nothing to do with the Divine Purpose."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "4 Compare yourself to who you were yesterday, not the useless person you are today",
+          "paragraphs": [
+            "Face it, you’re never going to be that smart, so don’t compare yourself to someone who is. Start by getting on your knees to pray. Even if you don’t Believe in God. Atheists are merely people who are blinded to the true way of Being. There, you feel marginally less useless already."
+          ]
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "5 Do not let your children do anything that makes you dislike them",
+          "paragraphs": [
+            "Remember that children are born with Original Sin and have a huge capacity for Evil. They are not Innocent Beings. They need Discipline if they are going to grow up to be even vaguely worthwhile humans. And slap them if necessary – don’t listen to what the lefties say."
+          ]
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "6 Set your house in order before you criticise the world",
+          "paragraphs": [
+            "Remember the story of Cain and Abel? Well, read it then. Yes, Abel was a schmuck who deserved to die and Cain wasn’t quite as goddamn perfect as he thought he was. He deserved to die, too. We all deserve to die. So stop moaning if someone is richer and better looking than you."
+          ]
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "src": "https://i.guim.co.uk/img/media/a4d2ebe863e949a25f586ff1512e95e0bc9e2182/845_822_3052_1832/master/3052.jpg?width=620&quality=85&dpr=1&s=none",
+          "title": "‘Here’s a rule that’s catnip for right-wingers everywhere: do not bother children while they are skateboarding’"
+        },
+        {
+          "id": "10",
+          "type": "TEXT",
+          "title": "7 Pursue what is meaningful, not what is expedient",
+          "paragraphs": [
+            "Life is suffering. The Book of Genesis tells us that. There is no easy way round this. So quit looking for short cuts and start reading Nietzsche."
+          ]
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "8 Tell the truth. Or at least don’t lie",
+          "paragraphs": [
+            "To be honest, I’m scrabbling around for thingsbut my publishers tell me I need 12. By telling you the Truth about this, I am an Improved Being. Certainly better than you."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "title": "9 Assume the person you are listening to knows something you don’t",
+          "paragraphs": [
+            "Just shut up, quit moaning and listen to me. I know things you don’t. So don’t expect me to listen to you. That’s not the way things work. I’m here to make you feel Better about Yourself by telling you things you already know in a way that makes you feel clever.        "
+          ]
+        },
+        {
+          "id": "13",
+          "type": "TEXT",
+          "title": "10 Be precise in your speech",
+          "paragraphs": [
+            "Confront the chaos of Being. Don’t try to beat about the bush. Things are going to be terrible. Oedipus killed his Dad. You may well kill yours. Get over it. Face up to the real horrors of the world."
+          ]
+        },
+        {
+          "id": "14",
+          "type": "TEXT",
+          "title": "11 Do not bother children while they are skateboarding",
+          "paragraphs": [
+            "This is the rule that’s the real catnip for right-wingers everywhere. Want to know why the world is falling apart? It’s because liberals are turning boys into girlies with their namby-pamby ways. Let boys do boy things and girls do girl things. Nowhere in the Bible does God say anything about this trans nonsense. There’s nothing wrong with men having all the best jobs and women staying home to look after the kids. So back off, ladies, and give us men a break."
+          ]
+        },
+        {
+          "id": "15",
+          "type": "TEXT",
+          "title": "12 Pet a cat when you encounter one in the street",
+          "paragraphs": [
+            "OK. So I really am scraping the barrel now. We’re all going to die. Probably painfully. So just make the best of what you’ve got. If you see a cat, stroke it. You might feel better. Though probably not. And if there are no cats, pet something else. Like a dog."
+          ]
+        }
+      ]
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "amazing !",
-      "postId": "1",
+      "articleId": "1",
       "userId": "1"
     },
     {
       "id": "2",
       "text": "very clever guy!",
-      "postId": "1",
+      "articleId": "1",
       "userId": "1"
     },
     {
       "id": "3",
       "text": "stunning...",
-      "postId": "1",
+      "articleId": "1",
       "userId": "1"
     },
     {
-      "postId": "1",
-      "userId": "1",
-      "text": "213",
-      "id": "ux7JNcU"
-    },
-    {
-      "postId": "1",
+      "articleId": "2",
       "userId": "2",
-      "text": "342",
-      "id": "tY9wmkw"
+      "text": "Peterson 10/10!!!",
+      "id": "OQGrg1o"
     },
     {
-      "postId": "1",
+      "articleId": "1",
       "userId": "2",
-      "text": "3",
-      "id": "sGcKIsC"
-    },
-    {
-      "postId": "1",
-      "userId": "2",
-      "text": "234",
-      "id": "35tiHSg"
-    },
-    {
-      "postId": "1",
-      "userId": "2",
-      "text": "4234",
-      "id": "oFUx8vo"
-    },
-    {
-      "postId": "1",
-      "userId": "1",
-      "text": "23",
-      "id": "gWhyGup"
+      "text": "Классная борода !!!",
+      "id": "sc7kyH1"
     }
   ],
   "users": [

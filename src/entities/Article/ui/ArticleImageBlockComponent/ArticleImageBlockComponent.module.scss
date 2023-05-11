@@ -1,4 +1,12 @@
 .img{
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 50%;
     max-height: 700px;
+}
+@media(max-width:1200px){
+    .img{
+        max-width: 100%;
+    }
 }

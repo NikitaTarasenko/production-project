@@ -3,7 +3,8 @@ import { User } from 'entities/User';
 export enum ArticleType {
     IT= 'IT',
     PSYCHOLOGY = 'PSYCHOLOGY',
-    PHILOSOPHY='PHILOSOPHY'
+    PHILOSOPHY='PHILOSOPHY',
+    BIOLOGY = 'BIOLOGY',
 }
 export enum ArticleBlockType {
     CODE= 'CODE',

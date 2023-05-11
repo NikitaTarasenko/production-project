@@ -8,6 +8,7 @@ import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
 import { AddCommentFormSchema } from 'features/addCommentForm';
+import { ArticlesPageSchema } from 'pages/ActiclesPage';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 import { NavigateOptions, To } from 'react-router-dom';
@@ -22,6 +23,7 @@ export interface StateSchema{
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
+    articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;

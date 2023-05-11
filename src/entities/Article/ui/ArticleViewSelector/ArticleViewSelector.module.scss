@@ -1,0 +1,15 @@
+.btn {
+    fill: var(--inverted-secondary-color);
+    margin-right: 5px;
+}
+
+.notSelected {
+    fill: var(--secondary-color)
+}
+.ArticleViewSelector{
+    margin-bottom: 10px;
+    margin-left: auto;
+     display: flex;
+     justify-content: flex-end;
+
+}
