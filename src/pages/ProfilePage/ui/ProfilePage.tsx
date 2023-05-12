@@ -22,6 +22,7 @@ import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useParams } from 'react-router-dom';
 
+import { PageWrapper } from 'widgets/PageWrapper';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 // import cls from './ProfilePage.module.scss';
@@ -101,7 +102,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <PageWrapper className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
                     <Text key={err} theme={TextTheme.ERROR} text={validateErrorTranslates[err]} />
@@ -120,7 +121,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </PageWrapper>
         </DynamicModuleLoader>
     );
 };

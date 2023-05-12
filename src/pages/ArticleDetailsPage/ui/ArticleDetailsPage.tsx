@@ -12,6 +12,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { PageWrapper } from 'widgets/PageWrapper';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsCommentsReducer, getArticleComments } from '../model/slices/articleDetailsCommentSlice';
 import { getArticleCommentsIsLoading } from '../model/selectors/comments';
@@ -46,14 +47,14 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     }, [dispatch]);
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <PageWrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 { t('Article not found')}
-            </div>
+            </PageWrapper>
         );
     }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <PageWrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ThemeButton.OUTLINE} onClick={onBackToList}>
                     {t('Back to list')}
                 </Button>
@@ -64,7 +65,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     isLoading={isLoading}
                     comments={comments}
                 />
-            </div>
+            </PageWrapper>
         </DynamicModuleLoader>
     );
 };
