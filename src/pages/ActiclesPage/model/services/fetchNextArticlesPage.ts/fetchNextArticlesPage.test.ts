@@ -17,6 +17,7 @@ describe('fetchNextArticlesPage.test', () => {
                 view: ArticleView.SMALL,
                 isLoading: false,
                 hasMore: true,
+                _inited: false,
             },
         });
 
@@ -35,6 +36,7 @@ describe('fetchNextArticlesPage.test', () => {
                 view: ArticleView.SMALL,
                 isLoading: false,
                 hasMore: false,
+                _inited: false,
             },
         });
 
@@ -53,6 +55,7 @@ describe('fetchNextArticlesPage.test', () => {
                 view: ArticleView.SMALL,
                 isLoading: true,
                 hasMore: true,
+                _inited: false,
             },
         });
 

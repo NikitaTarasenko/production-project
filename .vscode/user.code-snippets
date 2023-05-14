@@ -34,11 +34,29 @@
 		"prefix": "tt",
 		"body": [
 			"describe('${1:$TM_FILENAME_BASE}', () => {",
-				"test('', () => {",
-				"expect().toEqual();",
+			"test('', () => {",
+			"expect().toEqual();",
 			"});",
 			"});"
-			
+		],
+		"description": "fast component"
+	},
+	"slices template": {
+		"scope": "javascript,typescript, typescriptreact",
+		"prefix": "ss",
+		"body": [
+			"import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
+			"",
+			"const initialState: Schema = {};",
+			"",
+			"export const ${1:$TM_FILENAME_BASE} = createSlice({",
+			"name: '${1:$TM_FILENAME_BASE}',",
+			"initialState,",
+			"reducers: {},",
+			"});",
+			"",
+			"export const { actions: ScrollPosSaveActions } = ${1:$TM_FILENAME_BASE};",
+			"export const { reducer: ScrollPosSaveReducer } = ${1:$TM_FILENAME_BASE};",
 		],
 		"description": "fast component"
 	}

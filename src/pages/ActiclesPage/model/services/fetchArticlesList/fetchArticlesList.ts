@@ -13,6 +13,7 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchedArticlesList
     async (props, { extra, rejectWithValue, getState }) => {
         const { page = 1 } = props;
         const limit = getArticlesPageLimit(getState());
+
         try {
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {

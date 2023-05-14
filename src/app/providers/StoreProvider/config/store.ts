@@ -5,18 +5,20 @@ import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
 import { $api } from 'shared/api/api';
 import { NavigateOptions, To } from 'react-router-dom';
+import { scrollPosSaveReducer } from 'features/ScrollPosSave/model/slices/ScrollPosSaveSlice';
 import { StateSchema, ThunkExtraArgs } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(
     initialState? : StateSchema,
     asyncReducer?: ReducersMapObject<StateSchema>,
-    navigate?: (to: To, options?: NavigateOptions)=> void,
+
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducer,
         counter: counterReducer,
         user: userReducer,
+        scrollPosSave: scrollPosSaveReducer,
 
     };
 
@@ -24,7 +26,7 @@ export function createReduxStore(
 
     const extraArgs: ThunkExtraArgs = {
         api: $api,
-        navigate,
+
     };
     const store = configureStore({
 
