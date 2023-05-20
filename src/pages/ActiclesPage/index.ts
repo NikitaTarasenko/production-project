@@ -1,4 +1,4 @@
-import { ArticlesPageAsync } from './ui/ArticlesPage.async';
+import { ArticlesPageAsync } from './ui/ArticlesPage/ArticlesPage.async';
 
 export { ArticlesPageAsync as ArticlesPage };
 

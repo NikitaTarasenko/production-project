@@ -25,5 +25,21 @@
   "No comments": "Комментарии отсутствуют",
   "Write your comment": "Введите текст комментария",
   "Send": "Отправить",
-  "Read more": "Читать далее..."
+  "Read more": "Читать далее...",
+  "Sort by": "Сортировать по",
+  "Search": "Поиск",
+  "by ascending": "возрастанию",
+  "by descending": "убыванию",
+  "by": "по",
+  "date": "дате создания",
+  "title": "заголовк",
+  "views": "просмотрам",
+  "IT": "IT",
+  "All": "Все",
+  "PSYCHOLOGY": "Психология",
+  "PHILOSOPHY": "Философия",
+  "MEDITATION": "Медитации",
+  "FILMS": "Фильмы",
+  "BIOLOGY": "Биология",
+  "Articles not found": "Статьи не найдены"
 }

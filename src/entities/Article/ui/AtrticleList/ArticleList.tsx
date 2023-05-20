@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Article, ArticleView } from 'entities/Article/model/types/article';
+import { checkAmountOfCards } from 'pages/ActiclesPage/model/services/checkAmountOfCards/checkAmountOfCards';
 import cls from './ArticleList.module.scss';
 import { AtrticleListItem } from '../AtrticleListItem/AtrticleListItem';
 import { AtrticleListSkeleton } from '../AtrticleListItem/ArticleListItemSkeleton';
@@ -15,7 +16,7 @@ interface ArticleListProps {
 
 const getSkeletons = (view: ArticleView) => (
 
-    new Array(view === ArticleView.SMALL ? 10 : 3).fill(0).map((item, index) => (
+    new Array(view === ArticleView.SMALL ? checkAmountOfCards() : 3).fill(0).map((item, index) => (
         <AtrticleListSkeleton className={cls.card} key={index} view={view} />))
 
 );

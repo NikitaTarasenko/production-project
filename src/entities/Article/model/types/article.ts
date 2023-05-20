@@ -1,10 +1,18 @@
 import { User } from 'entities/User';
 
 export enum ArticleType {
-    IT= 'IT',
-    PSYCHOLOGY = 'PSYCHOLOGY',
-    PHILOSOPHY='PHILOSOPHY',
-    BIOLOGY = 'BIOLOGY',
+    ALL = 'All',
+    IT= 'IT ',
+    PSYCHOLOGY = 'Psychology',
+    PHILOSOPHY='Philosophy',
+    BIOLOGY = 'Biology',
+    MEDITATION = 'Meditation',
+    FILMS = 'Films',
+}
+export enum ArticleSortField {
+    VIEWS= 'views',
+    TITLE= 'title',
+    CREATED='createdAt',
 }
 export enum ArticleBlockType {
     CODE= 'CODE',

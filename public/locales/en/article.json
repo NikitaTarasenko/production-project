@@ -1,6 +1,14 @@
 {
   "Article not found": "Article not found",
   "Something went wrong with loading article": "Something went wrong with loading article...",
-  "article.Comments": "Comments",
-  "article.Back to list": "Back to list"
+  "Comments": "Comments",
+  "Back to list": "Back to list",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "by ascending": "ascending",
+  "by descending": "descending",
+  "by": "by",
+  "date": "data",
+  "title": "title",
+  "views": "views"
 }

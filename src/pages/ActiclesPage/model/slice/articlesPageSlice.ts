@@ -5,11 +5,15 @@ import {
 
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Article, ArticleView } from 'entities/Article';
+import {
+    Article, ArticleView, ArticleSortField, ArticleType,
+} from 'entities/Article';
 
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
+import { SortOrder } from 'shared/types';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
+import { checkAmountOfCards } from '../services/checkAmountOfCards/checkAmountOfCards';
 
 const articlesAdapter = createEntityAdapter<Article>({
     // Assume IDs are stored in a field other than `book.id`
@@ -20,6 +24,7 @@ const articlesAdapter = createEntityAdapter<Article>({
 export const getArticles = articlesAdapter.getSelectors<StateSchema>(
     (state) => state.articlesPage || articlesAdapter.getInitialState(),
 );
+
 const articlesPageSlice = createSlice({
     name: 'articlesPageSlice',
     initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
@@ -29,9 +34,15 @@ const articlesPageSlice = createSlice({
         isLoading: false,
         view: ArticleView.SMALL,
         page: 1,
+        limit: 10,
         hasMore: true,
         _inited: false,
+        sort: ArticleSortField.CREATED,
+        search: '',
+        order: 'asc',
+        type: ArticleType.ALL,
     }),
+
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
@@ -40,24 +51,53 @@ const articlesPageSlice = createSlice({
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
         },
+        setSort: (state, action: PayloadAction<ArticleSortField>) => {
+            state.sort = action.payload;
+        },
+        setSearch: (state, action: PayloadAction<string>) => {
+            state.search = action.payload;
+        },
+        setOrder: (state, action: PayloadAction<SortOrder>) => {
+            state.order = action.payload;
+        },
         initState: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+
             state.view = view;
-            state.limit = view === ArticleView.BIG ? 3 : 10;
+            state.limit = view === ArticleView.BIG ? 3 : checkAmountOfCards();
             state._inited = true;
+            state.limit = checkAmountOfCards();
+        },
+        setWindowHeight: (state, action: PayloadAction<number>) => {
+            state._windowHeight = action.payload;
+        },
+        setWindowWidth: (state, action: PayloadAction<number>) => {
+            state._windowWidth = action.payload;
+        },
+        setType: (state, action: PayloadAction<ArticleType>) => {
+            state.type = action.payload;
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchArticlesList.pending, (state) => {
+        builder.addCase(fetchArticlesList.pending, (state, action) => {
             state.error = undefined;
             state.isLoading = true;
+            state.limit = checkAmountOfCards();
+            if (action.meta.arg.replace) {
+                articlesAdapter.removeAll(state);
+            }
         });
         builder.addCase(
             fetchArticlesList.fulfilled,
-            (state, action: PayloadAction<Article[]>) => {
+            (state, action) => {
                 state.isLoading = false;
-                articlesAdapter.addMany(state, action.payload);
-                state.hasMore = action.payload.length > 0;
+                state.hasMore = action.payload.length >= state.limit;
+
+                if (action.meta.arg.replace) {
+                    articlesAdapter.setAll(state, action.payload);
+                } else {
+                    articlesAdapter.addMany(state, action.payload);
+                }
             },
         );
         builder.addCase(fetchArticlesList.rejected, (state, action) => {
