@@ -6,6 +6,7 @@ import cls from './Text.module.scss';
 export enum TextTheme {
     PRIMARY = 'primary',
     ERROR = 'error',
+    PRIMARY_INVERTED = 'primary_inverted',
 }
 export enum TextAlign {
     RIGHT = 'right',

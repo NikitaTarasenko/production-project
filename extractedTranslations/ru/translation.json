@@ -11,7 +11,10 @@
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
+  "Create new article": "Create new article",
+  "Creating the new article": "Creating the new article",
   "Edit": "Edit",
+  "Editing article with ID ": "Editing article with ID ",
   "Enter password": "Enter password",
   "Enter text": "Enter text",
   "Enter username": "Enter username",
@@ -25,6 +28,9 @@
   "MEDITATION": "MEDITATION",
   "Main": "Main",
   "Main page": "Main page",
+  "N": {
+    "Tarasenko App": "Tarasenko App"
+  },
   "No comments": "No comments",
   "Not entered age": "Not entered age",
   "Not entered city": "Not entered city",

@@ -1,44 +1,61 @@
 .title {
-  
+
     color: var(--secondary-color);
 }
 
 .text {
-   
+
     color: var(--primary-color)
 }
 
-.error{
-    .title{
+.primary_inverted {
+    .title {
+        color: var(--secondary-bg-color);
+    }
+
+    .text {
+        color: var( --inverted-secondary-color);
+    }
+}
+
+.error {
+    .title {
         color: var(--orange700);
     }
-    .text{
+
+    .text {
         color: var(--red700);
     }
 }
-.left{
+
+.left {
     text-align: left;
 }
-.right{
+
+.right {
     text-align: right;
 }
-.center{
+
+.center {
     text-align: center;
 }
 
-.size_m{
-    .title{
+.size_m {
+    .title {
         font: var(--font-l);
     }
-    .text{
+
+    .text {
         font: var(--font-m);
     }
 }
-.size_l{
-    .title{
+
+.size_l {
+    .title {
         font: var(--font-xl);
     }
-    .text{
+
+    .text {
         font: var(--font-l);
     }
 }

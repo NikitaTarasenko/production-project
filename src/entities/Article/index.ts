@@ -12,3 +12,4 @@ export { ArticleList } from './ui/AtrticleList/ArticleList';
 export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticlesTypeTabs } from './ui/ArticlesTypeTabs/ArticlesTypeTabs';
+export { getArticleDetailsData } from './model/selectors/articleDetails';
