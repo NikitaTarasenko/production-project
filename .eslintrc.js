@@ -45,7 +45,7 @@ module.exports = {
         }],
         'max-len': ['error', {
             ignoreComments: true,
-            code: 120,
+            code: 130,
         }],
         'linebreak-style': 0,
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks

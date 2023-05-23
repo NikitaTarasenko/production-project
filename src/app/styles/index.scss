@@ -3,14 +3,17 @@
 @import "themes/normal";
 @import "themes/dark";
 @import "themes/red";
-.app{
-    font: var(--font-m); 
-    color: var( --primary-color );
+
+.app {
+    font: var(--font-m);
+    color: var(--primary-color);
 }
- .app_modal{
-    font: var(--font-m); 
+
+.app_modal {
+    font: var(--font-m);
     color: var(--modal_color);
 }
+
 .app {
     background: var(--bg-color);
     min-height: 100vh;
@@ -20,4 +23,27 @@
     display: flex;
 }
 
+/* width */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
  
+    
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #888;
+    
+    cursor: pointer;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

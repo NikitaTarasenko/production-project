@@ -263,7 +263,7 @@
       "views": 1234,
       "createdAt": "05.05.2033",
       "type": [
-        "IT " 
+        "IT "
       ],
       "blocks": [
         {
@@ -996,6 +996,24 @@
       "userId": "2",
       "text": "Классная борода ;)",
       "id": "UIGMHEE"
+    },
+    {
+      "articleId": "12",
+      "userId": "2",
+      "text": "mafia...",
+      "id": "mMStykQ"
+    },
+    {
+      "articleId": "4",
+      "userId": "2",
+      "text": "Heisenberg",
+      "id": "Y8-9Qmj"
+    },
+    {
+      "articleId": "5",
+      "userId": "2",
+      "text": ":)",
+      "id": "6R_57NW"
     }
   ],
   "users": [

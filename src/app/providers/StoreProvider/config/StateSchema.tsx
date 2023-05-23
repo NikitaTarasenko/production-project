@@ -10,7 +10,7 @@ import { LoginSchema } from 'features/AuthByUserName';
 import { ScrollPosSaveSchema } from 'features/ScrollPosSave';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ActiclesPage';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema{
     counter : CounterSchema;
@@ -20,9 +20,12 @@ export interface StateSchema{
     loginForm?: LoginSchema;
     profile? : ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
+    // articleDetailsComments?: ArticleDetailsCommentsSchema;
+    // articleDetailsRecommendation?: ArticleDetailsRecommendationSchema;
     addCommentForm?: AddCommentFormSchema;
-    articlesPage?: ArticlesPageSchema
+    articlesPage?: ArticlesPageSchema;
+    articleDetailsPage? : ArticleDetailsPageSchema;
+
 }
 
 export type StateSchemaKey = keyof StateSchema;
