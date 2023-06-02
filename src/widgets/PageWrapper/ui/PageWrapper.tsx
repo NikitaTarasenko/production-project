@@ -41,13 +41,13 @@ export const PageWrapper = memo((props : PageWrapperProps) => {
         }));
     }, 500);
     return (
-        <section
+        <main
             onScroll={onScroll}
             ref={wrapperRef}
             className={classNames(cls.PageWrapper, {}, [className])}
         >
             {children}
             {onScrollEnd ? <div ref={triggerRef} className={cls.trigger} /> : null}
-        </section>
+        </main>
     );
 });
