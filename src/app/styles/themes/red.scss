@@ -1,17 +1,17 @@
 .app_dark_red {
-  
+
     --inverted-bg-color: #862B23;
     --primary-color: #862B23;
     --secondary-color: #862B23;
-    --inverted-primary-color:#FBF4F4;
-    --inverted-secondary-color:#201e1e;
-    
-    --bg-color:#FBF4F4;
-	--secondary-bg-color: #242222;
- 
+    --inverted-primary-color: #FBF4F4;
+    --inverted-secondary-color: #201e1e;
+
+    --bg-color: #FBF4F4;
+    --secondary-bg-color: #242222;
+
     // --secondary-color:var(--blue700);
-	--hover: var(--white);
-	--secondary-hover: var(--gray50);
+    --hover: var(--white);
+    --secondary-hover: var(--gray50);
     --modal_color: #2fb41a;
 
     --skeleton-color: #d6c3c3;
@@ -19,4 +19,5 @@
 
     --card-bg: #862B23;
     --card-font: var(--white);
+    --listbox-bg: #d3cfce
 }

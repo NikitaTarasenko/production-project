@@ -1,18 +1,27 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
+import { ListBox } from 'shared/ui/ListBox/ui/ListBox';
+import { HStack } from 'shared/ui/Stack';
 
 const MainPage = () => {
-    const [value, setValue] = useState('');
     const { t } = useTranslation();
 
-    const onChange = (val: string) => {
-        setValue(val);
-    };
     return (
         <div>
             {t('Main page')}
-            <Input placeholder={t('Enter text')} type="text" value={value} onChange={onChange} />
+            <HStack>
+                <ListBox
+                    defaultValue={t('Select option')}
+                    onChange={(value: string) => {}}
+                    value={undefined}
+                    items={[
+                        { value: '1', content: '123' },
+                        { value: '2', content: '235', disabled: true },
+                        { value: '3', content: '124' },
+                    ]}
+                />
+            </HStack>
         </div>
     );
 };
