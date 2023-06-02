@@ -9,7 +9,7 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -35,29 +35,29 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack justify="between" className={classNames('', {}, [className])}>
             <Text title={t('Profile')} />
             {canEdit && (
-                <div className={cls.btnsWrapper}>
+                <div>
                     { readonly
                         ? (
-                            <Button className={cls.editBtn} theme={ThemeButton.OUTLINE} onClick={onEdit}>
+                            <Button theme={ThemeButton.OUTLINE} onClick={onEdit}>
                                 {t('Edit')}
                             </Button>
                         )
                         : (
-                            <>
-                                <Button className={cls.editBtn} theme={ThemeButton.OUTLINE_RED} onClick={onCancelEdit}>
+                            <HStack gap="8">
+                                <Button theme={ThemeButton.OUTLINE_RED} onClick={onCancelEdit}>
                                     {t('Cancel')}
                                 </Button>
-                                <Button className={cls.saveBtn} theme={ThemeButton.OUTLINE} onClick={onSave}>
+                                <Button theme={ThemeButton.OUTLINE} onClick={onSave}>
                                     {t('Save')}
                                 </Button>
-                            </>
+                            </HStack>
 
                         )}
                 </div>
             )}
-        </div>
+        </HStack>
     );
 };
