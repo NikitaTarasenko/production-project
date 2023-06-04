@@ -3,9 +3,9 @@ import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import { HStack } from 'shared/ui/Stack';
+import CaretRight from '../../../assets/icons/caretRight.svg';
 import cls from './ListBox.module.scss';
-
-type DropDownDirection = 'top' | 'bottom';
+import { DropDownDirection } from '../../../types/ui';
 
 export interface ListBoxItem {
     value: string;
@@ -25,11 +25,14 @@ export interface ListBoxItem {
  }
 
 const mapDirectionClass: Record<DropDownDirection, string> = {
-    bottom: cls.optionsBottom,
-    top: cls.optionsTop,
+    'bottom left': cls.optionsBottomLeft,
+    'bottom right': cls.optionsBottomRight,
+    'top right': cls.optionsTopRight,
+    'top left': cls.optionsTopLeft,
 };
+
 export function ListBox({
-    items, className, value, onChange, defaultValue, readonly, direction = 'bottom', label,
+    items, className, value, onChange, defaultValue, readonly, direction = 'bottom right', label,
 }:ListBoxProps) {
     const optionsClasses = [mapDirectionClass[direction]];
 
@@ -69,7 +72,7 @@ export function ListBox({
                                     classNames(cls.item, { [cls.active]: active, [cls.disabled]: item.disabled })
                                 }
                                 >
-                                    {selected && '!!'}
+                                    {selected && <CaretRight />}
                                     {item.content}
                                 </li>
                             )}

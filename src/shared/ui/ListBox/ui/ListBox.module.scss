@@ -14,7 +14,7 @@
 .options {
     background-color: var(--listbox-bg);
     position: absolute;
-    z-index: 21123;
+    z-index: 10000;
     border-radius: 4px 4px 8px var(--listbox-bg);
     min-width: 100px;
     width: auto;
@@ -22,21 +22,49 @@
 }
 
 .item {
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
 }
-.active{
+
+.item svg {
+    transform: scale(.9);
+    margin-right: 2px;
+}
+
+.active {
     cursor: pointer;
     background-color: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
 }
-.disabled{
+
+.disabled {
     opacity: .6;
 }
 
-    
-.optionsTop{
-    bottom: 100%;
-}
-.label{
+
+
+.label {
     margin-right: 5px;
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
+
 }

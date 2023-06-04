@@ -41,7 +41,7 @@ export const CountrySelect = memo(({
             label={t('Select country')}
             items={options}
             readonly={readOnly}
-            direction="top"
+            direction="top right"
         />
         // <Select
         //     className={classNames('', mods, [className])}

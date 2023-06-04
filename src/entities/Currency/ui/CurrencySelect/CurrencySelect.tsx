@@ -39,7 +39,7 @@ export const CurrencySelect = memo(({
             label={t('Select currency')}
             items={options}
             readonly={readOnly}
-            direction="top"
+            direction="top right"
         />
 
     );
