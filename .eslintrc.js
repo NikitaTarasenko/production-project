@@ -50,6 +50,7 @@ module.exports = {
                 'gap',
                 'role',
                 'as',
+                'target',
             ],
         }],
         'max-len': ['error', {

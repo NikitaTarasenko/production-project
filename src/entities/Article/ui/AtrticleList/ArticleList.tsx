@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { Article, ArticleView } from 'entities/Article/model/types/article';
-import { checkAmountOfCards } from 'pages/ActiclesPage/model/services/checkAmountOfCards/checkAmountOfCards';
+import { checkAmountOfCards } from 'shared/lib/checkAmountOfCards/checkAmountOfCards';
 import cls from './ArticleList.module.scss';
 import { AtrticleListItem } from '../AtrticleListItem/AtrticleListItem';
 import { AtrticleListSkeleton } from '../AtrticleListItem/ArticleListItemSkeleton';

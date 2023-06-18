@@ -11,9 +11,10 @@ import {
 
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 import { SortOrder } from 'shared/types';
+
+import { checkAmountOfCards } from 'shared/lib/checkAmountOfCards/checkAmountOfCards';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
-import { checkAmountOfCards } from '../services/checkAmountOfCards/checkAmountOfCards';
 
 const articlesAdapter = createEntityAdapter<Article>({
     // Assume IDs are stored in a field other than `book.id`
@@ -66,7 +67,6 @@ const articlesPageSlice = createSlice({
             state.view = view;
             state.limit = view === ArticleView.BIG ? 3 : checkAmountOfCards();
             state._inited = true;
-            state.limit = checkAmountOfCards();
         },
         setWindowHeight: (state, action: PayloadAction<number>) => {
             state._windowHeight = action.payload;

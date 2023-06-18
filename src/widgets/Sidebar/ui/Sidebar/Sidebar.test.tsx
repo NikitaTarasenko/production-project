@@ -14,6 +14,6 @@ describe('Sidebar', () => {
         const toggleBtn = screen.getByTestId('sidebarToggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
-        expect(screen.getByTestId('sidebar')).not.toHaveClass('collapsed');
+        expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
     });
 });

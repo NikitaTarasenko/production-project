@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { SortOrder } from 'shared/types';
 import { ArticleSortField } from 'entities/Article';
+import { checkAmountOfCards } from 'shared/lib/checkAmountOfCards/checkAmountOfCards';
 import {
     getArticlesPageInited,
     getArticlesPageLimit,
@@ -9,13 +10,12 @@ import {
 } from '../../selectors/articlesPageSelector';
 import { articlesPageActions } from '../../slice/articlesPageSlice';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
-import { checkAmountOfCards } from '../checkAmountOfCards/checkAmountOfCards';
 
 export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(
     'articlesPage/initArticlesPage',
     async (searchParams, { getState, dispatch }) => {
         const isInited = getArticlesPageInited(getState());
-        const limit = getArticlesPageLimit(getState());
+        // const limit = getArticlesPageLimit(getState());
 
         if (!isInited) {
             const orderFormUrl = searchParams.get('order') as SortOrder;

@@ -1,4 +1,4 @@
-export const checkAmountOfCards = () => {
+export function checkAmountOfCards() {
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
     let amountCards = 10;
@@ -44,5 +44,6 @@ export const checkAmountOfCards = () => {
             amountCards = 3;
         }
     }
+
     return amountCards;
-};
+}

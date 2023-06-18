@@ -30,7 +30,7 @@ interface ProfileCardProps {
   onChangeCountry?: (Country?: Country) => void;
 }
 export const ProfileCard = (props: ProfileCardProps) => {
-    const { t } = useTranslation('profile');
+    const { t } = useTranslation('');
     const {
         className,
         data,
