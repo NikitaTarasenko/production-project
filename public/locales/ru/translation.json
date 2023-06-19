@@ -69,5 +69,7 @@
   "Not entered country": "Некорректный город",
   "Not entered data": "Данные не указаны !",
   "Not entered city": "Не введен город",
-  "Profile not found": "Профиль не найден"
+  "Profile not found": "Профиль не найден",
+  "AdminPl": "Админка",
+  "You dont have access to this page": "У вас нет доступа к этой странице!"
 }

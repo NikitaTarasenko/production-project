@@ -1,6 +1,8 @@
 {
   "About": "",
   "About page": "About page",
+  "AdminPanelPage": "AdminPanelPage",
+  "AdminPl": "AdminPl",
   "All": "All",
   "Article not found": "Article not found",
   "Articles not found": "Articles not found",
@@ -60,6 +62,7 @@
   "Try to refresh the page": "Try to refresh the page",
   "Username": "Username",
   "Write your comment": "Write your comment",
+  "You dont have access to this page": "You dont have access to this page",
   "You entered wrong name or password": "",
   "Your age": "Your age",
   "Your lastname": "Your lastname",

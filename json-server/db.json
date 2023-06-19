@@ -1027,14 +1027,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
     }
   ],
