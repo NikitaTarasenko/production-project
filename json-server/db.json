@@ -1041,12 +1041,12 @@
   "profile": [
     {
       "id": "1",
-      "first": "Nikitos",
-      "lastName": "Tarasenko",
+      "first": "Никита",
+      "lastName": "Тарасенко",
       "age": 22,
       "currency": "EUR",
       "country": "Ukraine",
-      "city": " Brovary",
+      "city": "Киев",
       "username": "ghost",
       "avatar": "https://c4.wallpaperflare.com/wallpaper/380/902/355/call-of-duty-call-of-duty-ghosts-wallpaper-preview.jpg"
     },
