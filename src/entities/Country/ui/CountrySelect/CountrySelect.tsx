@@ -1,9 +1,8 @@
 import { Modes, classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Select } from 'shared/ui/Select/Select';
-import { Country } from 'entities/Country';
 import { memo, useCallback } from 'react';
 import { ListBox } from 'shared/ui/ListBox/ui/ListBox';
+import { Country } from '../../model/types/country';
 import cls from './CountrySelect.module.scss';
 
 interface CountrySelectProps {
