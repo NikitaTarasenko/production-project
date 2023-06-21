@@ -1,7 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { Article, ArticleView } from 'entities/Article/model/types/article';
+import { Article } from 'entities/Article/model/types/article';
+import { ArticleView } from 'entities/Article/model/consts/consts';
 import { checkAmountOfCards } from 'shared/lib/checkAmountOfCards/checkAmountOfCards';
 import cls from './ArticleList.module.scss';
 import { AtrticleListItem } from '../AtrticleListItem/AtrticleListItem';

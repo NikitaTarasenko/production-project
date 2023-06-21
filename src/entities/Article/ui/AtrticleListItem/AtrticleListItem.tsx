@@ -10,8 +10,9 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Route, useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { ArticleBlockType, ArticleView } from 'entities/Article/model/consts/consts';
 import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+    Article, ArticleTextBlock,
 } from '../../model/types/article';
 import cls from './AtrticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';

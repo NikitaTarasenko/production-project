@@ -16,7 +16,8 @@ import {
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock } from 'entities/Article/model/types/article';
+import { ArticleBlockType } from 'entities/Article/model/consts/consts';
 import cls from './ArticleDetails.module.scss';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
