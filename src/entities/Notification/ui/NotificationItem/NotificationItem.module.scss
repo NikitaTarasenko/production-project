@@ -1,0 +1,9 @@
+.NotificationItem, .link{
+    width: 100%;
+}
+.link{
+    transition: .4s all ease-in-out;
+}
+.link:hover{
+    padding-left: 15px;
+}

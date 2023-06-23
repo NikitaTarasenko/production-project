@@ -1,4 +1,33 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification №1",
+      "description": "Something has happened",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Notification №2",
+      "description": "Something has happened",
+      "userId": "1",
+      "href": "https://api.github.com/"
+    },
+    {
+      "id": "3",
+      "title": "Notification №3",
+      "description": "Something has happened",
+      "userId": "1",
+      "href": "https://api.github.com/"
+    },
+    {
+      "id": "4",
+      "title": "Notification №4",
+      "description": "Something has happened",
+      "userId": "1",
+      "href": "https://api.github.com/"
+    }
+  ],
   "posts": [
     {
       "id": "1",
@@ -1042,7 +1071,7 @@
       "username": "manager",
       "password": "123",
       "roles": ["MANAGER"],
-      "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
+      "avatar": "https://static.hdrezka.ac/i/2021/10/12/n672aa3627291by54q52r.jpg"
     }
   ],
   "profile": [

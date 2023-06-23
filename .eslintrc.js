@@ -51,6 +51,7 @@ module.exports = {
                 'role',
                 'as',
                 'target',
+                'border',
             ],
         }],
         'max-len': ['error', {
