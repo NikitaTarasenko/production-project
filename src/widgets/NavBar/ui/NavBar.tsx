@@ -13,9 +13,10 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { HStack } from 'shared/ui/Stack';
-import Notification from 'shared/assets/icons/notification.svg';
+
 import { Dropdown, Popover } from 'shared/ui/Popups';
 import { NotificationList } from 'entities/Notification';
+import { NotificationButton } from 'features/notificationButton';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -59,16 +60,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                     {t('Create new article')}
                 </AppLink>
                 <HStack gap="16" className={cls.actions}>
-                    <Popover
-                        direction="bottom left"
-                        trigger={(
-                            <Button theme={ThemeButton.CLEAR} className={cls.notif}>
-                                <Notification />
-                            </Button>
-                        )}
-                    >
-                        <NotificationList className={cls.notifications} />
-                    </Popover>
+                    <NotificationButton />
                     <Dropdown
                         direction="bottom left"
                         className={cls.dropdown}

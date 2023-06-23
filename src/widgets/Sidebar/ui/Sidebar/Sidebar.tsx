@@ -1,5 +1,5 @@
-import { memo, useState } from 'react';
-
+import { memo, useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
@@ -19,7 +19,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     const onToggle = () => {
         setCollapsed(!collapsed);
     };
-
+    useEffect(() => {
+        if (isMobile) {
+            setCollapsed(true);
+        }
+    }, []);
     return (
         <aside
             data-testid="sidebar"
