@@ -26,6 +26,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 10000;
+    transition: .3s all ease-in-out;
 }
 
 .content::before {
@@ -38,6 +39,7 @@
     margin: auto;
     bottom: 40px;
     border-radius: 12px;
+    
 }
 
 .opened {
@@ -47,5 +49,15 @@
 
     .content {
         transform: translateY(0%);
+    }
+}
+
+.isClosing{
+    .content{
+        transform:translateY(100%);
+        opacity:0;
+    }
+    .overlay {
+        opacity: 0;
     }
 }
