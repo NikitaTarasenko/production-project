@@ -1,10 +1,10 @@
 /* eslint-disable i18next/no-literal-string */
+import { memo } from 'react';
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import Sun from '@/shared/assets/icons/sun.svg';
 import Moon from '@/shared/assets/icons/moon.svg';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { memo } from 'react';
 
 interface ThemeSwitcherProps {
   className?: string;

@@ -1,10 +1,10 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavBar } from '@/widgets/NavBar';
-import { Sidebar } from '@/widgets/Sidebar';
 import {
     Suspense, useEffect,
 } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { NavBar } from '@/widgets/NavBar';
+import { Sidebar } from '@/widgets/Sidebar';
 import { getUserMounted, userActions } from '@/entities/User';
 import { useWindowDimensions } from '@/shared/lib/hooks/useWindowDimensions/useWindowDimensions';
 

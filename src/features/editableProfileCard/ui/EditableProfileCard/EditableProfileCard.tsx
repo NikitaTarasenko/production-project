@@ -1,12 +1,12 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
     memo, useCallback, useEffect, useState,
 } from 'react';
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 

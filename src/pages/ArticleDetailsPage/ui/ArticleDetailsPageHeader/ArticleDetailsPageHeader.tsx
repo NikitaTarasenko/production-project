@@ -1,10 +1,10 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useSelector } from 'react-redux';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 
 import { getArticleDetailsData } from '@/entities/Article';

@@ -1,7 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Modes, classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { Modes, classNames } from '@/shared/lib/classNames/classNames';
 import { TextTheme, Text, TextAlign } from '@/shared/ui/Text/Text';
 import { Input } from '@/shared/ui/Input/Input';
 import { Profile } from '@/entities/Profile/model/types/profile';

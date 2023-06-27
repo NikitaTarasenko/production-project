@@ -1,6 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Article } from '@/entities/Article/model/types/article';
 import { ArticleView } from '@/entities/Article/model/consts/consts';
 import { checkAmountOfCards } from '@/shared/lib/checkAmountOfCards/checkAmountOfCards';

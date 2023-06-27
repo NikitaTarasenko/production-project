@@ -1,9 +1,8 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
-
 import { memo } from 'react';
-import { ArticleDetails } from '@/entities/Article';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ArticleDetails } from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { PageWrapper } from '@/widgets/PageWrapper';
 import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';

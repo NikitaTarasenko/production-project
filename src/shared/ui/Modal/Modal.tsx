@@ -1,8 +1,8 @@
-import { useTheme } from '@/app/providers/ThemeProvider';
 import React, {
     MutableRefObject,
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
+import { useTheme } from '@/app/providers/ThemeProvider';
 import { Modes, classNames } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { Portal } from '../Portal/Portal';

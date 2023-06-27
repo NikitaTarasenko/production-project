@@ -1,13 +1,13 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { Route, useNavigate } from 'react-router-dom';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text/Text';
 import IconEye from '@/shared/assets/icons/seen.svg';
 import { Card } from '@/shared/ui/Card/Card';
 
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { Route, useNavigate } from 'react-router-dom';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { ArticleBlockType, ArticleView } from '@/entities/Article/model/consts/consts';

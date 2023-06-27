@@ -1,6 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Notification } from '@/entities/Notification/model/types/notification';
 import { Card, CardTheme } from '@/shared/ui/Card/Card';
 import { Text } from '@/shared/ui/Text/Text';

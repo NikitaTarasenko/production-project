@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { Input } from '@/shared/ui/Input/Input';
-import { memo, useCallback } from 'react';
 
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';

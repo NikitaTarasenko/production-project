@@ -1,7 +1,7 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import {
     getArticlesPageOrder,
