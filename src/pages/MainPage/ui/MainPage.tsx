@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
-import { ListBox } from 'shared/ui/Popups/ui/ListBox/ListBox';
-import { HStack } from 'shared/ui/Stack';
+import { Input } from '@/shared/ui/Input/Input';
+import { ListBox } from '@/shared/ui/Popups/ui/ListBox/ListBox';
+import { HStack } from '@/shared/ui/Stack';
 
 const MainPage = () => {
     const { t } = useTranslation();

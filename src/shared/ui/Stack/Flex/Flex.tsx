@@ -1,4 +1,4 @@
-import { Modes, classNames } from 'shared/lib/classNames/classNames';
+import { Modes, classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
 import cls from './Flex.module.scss';

@@ -1,19 +1,19 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
     memo, useCallback, useEffect, useState,
 } from 'react';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDIspatch/useAppDispatch';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
 
-import { ProfileCard } from 'entities/Profile';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from 'shared/ui/Stack';
-import { ValidateProfileError } from 'features/editableProfileCard/model/consts/consts';
+import { ProfileCard } from '@/entities/Profile';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { VStack } from '@/shared/ui/Stack';
+import { ValidateProfileError } from '@/features/editableProfileCard/model/consts/consts';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';

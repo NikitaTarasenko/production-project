@@ -1,16 +1,16 @@
 /* eslint-disable i18next/no-literal-string */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Modes, classNames } from 'shared/lib/classNames/classNames';
+import { Modes, classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { TextTheme, Text, TextAlign } from 'shared/ui/Text/Text';
-import { Input } from 'shared/ui/Input/Input';
-import { Profile } from 'entities/Profile/model/types/profile';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Currency } from 'entities/Currency/model/types/currency';
-import { CurrencySelect } from 'entities/Currency';
-import { Country } from 'entities/Country/model/types/country';
-import { CountrySelect } from 'entities/Country';
+import { TextTheme, Text, TextAlign } from '@/shared/ui/Text/Text';
+import { Input } from '@/shared/ui/Input/Input';
+import { Profile } from '@/entities/Profile/model/types/profile';
+import { Loader } from '@/shared/ui/Loader/Loader';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Currency } from '@/entities/Currency/model/types/currency';
+import { CurrencySelect } from '@/entities/Currency';
+import { Country } from '@/entities/Country/model/types/country';
+import { CountrySelect } from '@/entities/Country';
 
 import cls from './ProfileCard.module.scss';
 

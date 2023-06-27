@@ -1,7 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { PageWrapper } from 'widgets/PageWrapper';
+import { PageWrapper } from '@/widgets/PageWrapper';
 import { useParams } from 'react-router-dom';
 import cls from './ArticleEditPage.module.scss';
 

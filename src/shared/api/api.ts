@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_THEME_KEY } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { LOCAL_STORAGE_THEME_KEY } from '@/app/providers/ThemeProvider/lib/ThemeContext';
 import axios from 'axios';
 
 export const $api = axios.create({

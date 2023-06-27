@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
-import Articles from 'shared/assets/icons/artic.svg';
+import Articles from '@/shared/assets/icons/artic.svg';
 import cls from './Code.module.scss';
 import { Button, ThemeButton } from '../Button/Button';
 

@@ -1,23 +1,23 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice';
 import { memo, useCallback, useEffect } from 'react';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import SeenIco from 'shared/assets/icons/seen.svg';
-import CalendarIco from 'shared/assets/icons/calendar.svg';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDIspatch/useAppDispatch';
+import { fetchArticleById } from '@/entities/Article/model/services/fetchArticleById/fetchArticleById';
+import SeenIco from '@/shared/assets/icons/seen.svg';
+import CalendarIco from '@/shared/assets/icons/calendar.svg';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
-} from 'entities/Article/model/selectors/articleDetails';
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { ArticleBlock } from 'entities/Article/model/types/article';
-import { ArticleBlockType } from 'entities/Article/model/consts/consts';
+} from '@/entities/Article/model/selectors/articleDetails';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { ArticleBlock } from '@/entities/Article/model/types/article';
+import { ArticleBlockType } from '@/entities/Article/model/consts/consts';
 import cls from './ArticleDetails.module.scss';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';

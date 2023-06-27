@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { CSSProperties, useMemo } from 'react';
 import cls from './Avatar.module.scss';
 

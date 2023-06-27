@@ -1,8 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { memo } from 'react';
-import { ArticleImgBlock } from 'entities/Article/model/types/article';
-import { Text, TextAlign } from 'shared/ui/Text/Text';
+import { ArticleImgBlock } from '@/entities/Article/model/types/article';
+import { Text, TextAlign } from '@/shared/ui/Text/Text';
 import cls from './ArticleImageBlockComponent.module.scss';
 
 interface ArticleImageBlockComponentProps {
