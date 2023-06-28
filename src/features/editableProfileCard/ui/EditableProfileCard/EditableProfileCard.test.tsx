@@ -1,11 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
 import { fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
-import { Profile } from '@/entities/Profile';
-import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { Profile } from '@/entities/Profile';
 import { $api } from '@/shared/api/api';
+import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 

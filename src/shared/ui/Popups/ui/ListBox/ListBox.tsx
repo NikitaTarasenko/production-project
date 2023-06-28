@@ -49,7 +49,7 @@ export function ListBox({
                 className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
             >
 
-                <HListBox.Button className={cls.trigger}>
+                <HListBox.Button as="div" className={cls.trigger}>
                     <Button disabled={readonly}>
                         {value ?? defaultValue}
                     </Button>

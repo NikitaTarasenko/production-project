@@ -1,28 +1,21 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from '@/shared/ui/Input/Input';
-import { ListBox } from '@/shared/ui/Popups/ui/ListBox/ListBox';
-import { HStack } from '@/shared/ui/Stack';
+
+import { PageWrapper } from '@/widgets/PageWrapper';
+import { StarRating } from '@/shared/ui/StarRating/StarRating';
+import { RatingCard } from '@/entities/Rating';
 
 const MainPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
+        <PageWrapper>
             {t('Main page')}
-            <HStack>
-                <ListBox
-                    defaultValue={t('Select option')}
-                    onChange={(value: string) => {}}
-                    value={undefined}
-                    items={[
-                        { value: '1', content: '123' },
-                        { value: '2', content: '235', disabled: true },
-                        { value: '3', content: '124' },
-                    ]}
-                />
-            </HStack>
-        </div>
+            <RatingCard
+                title="Did you like the article? "
+                feedbackTitle="Leave feedback about it"
+                hasFeedback
+            />
+        </PageWrapper>
     );
 };
 

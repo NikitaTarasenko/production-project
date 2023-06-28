@@ -1,0 +1,13 @@
+.star {
+ 
+    stroke: var(--inverted-primary-color);
+   
+    cursor: pointer;
+}
+
+.normal {
+    fill: none
+}
+.hovered{
+    fill: var(--inverted-primary-color);
+}

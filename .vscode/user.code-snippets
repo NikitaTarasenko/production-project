@@ -10,7 +10,7 @@
 		"scope": "javascript,typescript, typescriptreact",
 		"prefix": "cc",
 		"body": [
-			"import { classNames} from 'shared/lib/classNames/classNames';",
+			"import { classNames} from '@/shared/lib/classNames/classNames';",
 			"import cls from './${1:$TM_FILENAME_BASE}.module.scss';",
 			"import { useTranslation } from 'react-i18next';",
 			"import { memo } from 'react';",
