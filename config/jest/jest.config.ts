@@ -26,6 +26,7 @@ export default {
     ],
     moduleDirectories: [
         'node_modules',
+        'src',
     ],
     modulePaths: [
         '<rootDir>src',
@@ -39,6 +40,7 @@ export default {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent'),
         axios: 'axios/dist/node/axios.cjs',
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     reporters: [
         'default',

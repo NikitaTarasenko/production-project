@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LOCAL_STORAGE_THEME_KEY } from '@/app/providers/ThemeProvider/lib/ThemeContext';
+import { LOCAL_STORAGE_THEME_KEY } from '../const/localStorage';
 
 export const $api = axios.create({
     baseURL: __API__,

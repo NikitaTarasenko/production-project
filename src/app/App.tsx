@@ -6,12 +6,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { NavBar } from '@/widgets/NavBar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { getUserMounted, userActions } from '@/entities/User';
-import { useWindowDimensions } from '@/shared/lib/hooks/useWindowDimensions/useWindowDimensions';
-
-import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
-import { articlesPageActions } from '@/pages/ActiclesPage/model/slice/articlesPageSlice';
 import { AppRouter } from './providers/router';
-import { useTheme } from './providers/ThemeProvider';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 const App = () => {
     const { theme } = useTheme();

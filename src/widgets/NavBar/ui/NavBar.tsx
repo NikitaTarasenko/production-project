@@ -9,7 +9,7 @@ import {
 } from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { HStack } from '@/shared/ui/Stack';
