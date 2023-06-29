@@ -3,7 +3,6 @@ import {
     memo, useCallback, useEffect, useState,
 } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { classNames } from '@/shared/lib/classNames/classNames';

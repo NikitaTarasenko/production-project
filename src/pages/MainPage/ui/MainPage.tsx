@@ -2,7 +2,6 @@
 import { useTranslation } from 'react-i18next';
 
 import { PageWrapper } from '@/widgets/PageWrapper';
-import { StarRating } from '@/shared/ui/StarRating/StarRating';
 import { RatingCard } from '@/entities/Rating';
 
 const MainPage = () => {

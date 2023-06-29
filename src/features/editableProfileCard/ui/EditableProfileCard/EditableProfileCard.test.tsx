@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { fireEvent, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';

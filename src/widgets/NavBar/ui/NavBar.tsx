@@ -14,8 +14,7 @@ import { RoutePath } from '@/shared/const/router';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { HStack } from '@/shared/ui/Stack';
 
-import { Dropdown, Popover } from '@/shared/ui/Popups';
-import { NotificationList } from '@/entities/Notification';
+import { Dropdown } from '@/shared/ui/Popups';
 import { NotificationButton } from '@/features/notificationButton';
 import cls from './NavBar.module.scss';
 

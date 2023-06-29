@@ -5,10 +5,7 @@ import {
 
 } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { Comment } from '@/entities/Comment';
 import { Article } from '@/entities/Article';
-import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
-import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId';
 import { ArticleDetailsRecommendationSchema } from '../types/ArticleDetailsRecommendationSchema';
 import { fetchArticlesRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
 

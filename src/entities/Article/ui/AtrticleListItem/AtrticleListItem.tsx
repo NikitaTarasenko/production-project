@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
-import { Route, useNavigate } from 'react-router-dom';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text/Text';
 import IconEye from '@/shared/assets/icons/seen.svg';

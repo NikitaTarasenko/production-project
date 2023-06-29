@@ -5,7 +5,6 @@ import { ArticleSortField } from '@/entities/Article';
 import { checkAmountOfCards } from '@/shared/lib/checkAmountOfCards/checkAmountOfCards';
 import {
     getArticlesPageInited,
-    getArticlesPageLimit,
 
 } from '../../selectors/articlesPageSelector';
 import { articlesPageActions } from '../../slice/articlesPageSlice';
