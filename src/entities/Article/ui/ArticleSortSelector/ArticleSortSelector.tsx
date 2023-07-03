@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOptions } from '@/shared/ui/Select/Select';
 import { ArticleSortField } from '@/entities/Article/model/consts/consts';
@@ -19,7 +19,7 @@ export const ArticleSortSelector = memo((props : ArticleSortSelectorProps) => {
     } = props;
     const { t } = useTranslation('');
 
-    const orderOptions = useMemo<SelectOptions[]>(() => [
+    const orderOptions = useMemo<SelectOptions<SortOrder>[]>(() => [
         {
             value: 'asc',
             content: t('by ascending'),
@@ -30,7 +30,7 @@ export const ArticleSortSelector = memo((props : ArticleSortSelectorProps) => {
         },
     ], [t]);
 
-    const sortFieldOptions = useMemo<SelectOptions[]>(() => [
+    const sortFieldOptions = useMemo<SelectOptions<ArticleSortField>[]>(() => [
         {
             value: ArticleSortField.CREATED,
             content: t('date'),
@@ -45,24 +45,16 @@ export const ArticleSortSelector = memo((props : ArticleSortSelectorProps) => {
         },
     ], [t]);
 
-    const onChangeOrderHandler = useCallback((newOrder: string) => {
-        onChangeOrder(newOrder as SortOrder);
-    }, [onChangeOrder]);
-
-    const onChangeSortHandler = useCallback((newSort: string) => {
-        onChangeSort(newSort as ArticleSortField);
-    }, [onChangeSort]);
-
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
-            <Select
-                onChange={onChangeSortHandler}
+            <Select<ArticleSortField>
+                onChange={onChangeSort}
                 options={sortFieldOptions}
                 label={t('Sort by')}
                 value={sort}
             />
             <Select
-                onChange={onChangeOrderHandler}
+                onChange={onChangeOrder}
                 options={orderOptions}
                 label={t('by')}
                 value={order}

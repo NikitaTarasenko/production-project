@@ -10,9 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    args: {
-        to: '/',
-    },
+
 } as ComponentMeta<typeof ThemeSwitcher>;
 
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
@@ -23,4 +21,9 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 
+export const DARK_RED = Template.bind({});
+DARK_RED.args = {};
+
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Light.decorators = [ThemeDecorator(Theme.LIGHT)];
+DARK_RED.decorators = [ThemeDecorator(Theme.DARK_RED)];

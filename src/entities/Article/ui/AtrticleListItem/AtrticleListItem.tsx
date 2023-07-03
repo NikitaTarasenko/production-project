@@ -7,7 +7,7 @@ import { Card } from '@/shared/ui/Card/Card';
 
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { ArticleBlockType, ArticleView } from '@/entities/Article/model/consts/consts';
 import {
@@ -27,11 +27,6 @@ export const AtrticleListItem = memo((props : AtrticleListItemProps) => {
         className, article, view, target,
     } = props;
     const { t } = useTranslation();
-    // const navigate = useNavigate();
-
-    // const onOpenArticle = useCallback(() => {
-    //     navigate(RoutePath.article_details + article.id);
-    // }, [article.id, navigate]);
 
     const typesArticle = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
@@ -60,7 +55,7 @@ export const AtrticleListItem = memo((props : AtrticleListItemProps) => {
                     <div className={cls.footer}>
                         <AppLink
                             target={target}
-                            to={RoutePath.article_details + article.id}
+                            to={getRouteArticleDetails(article.id)}
                         >
                             <Button theme={ThemeButton.OUTLINE}>
                                 {t('Read more')}
@@ -78,7 +73,7 @@ export const AtrticleListItem = memo((props : AtrticleListItemProps) => {
 
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.AtrticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>

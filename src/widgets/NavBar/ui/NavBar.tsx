@@ -9,7 +9,9 @@ import {
 } from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { RoutePath } from '@/shared/const/router';
+import {
+    getRouteAdmin, getRouteArticleCreate, getRouteProfile,
+} from '@/shared/const/router';
 
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { HStack } from '@/shared/ui/Stack';
@@ -53,7 +55,7 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 />
                 <AppLink
                     className={cls.createBtn}
-                    to={RoutePath.article_create}
+                    to={getRouteArticleCreate()}
                     theme={AppLinkTheme.SECONDARY}
                 >
                     {t('Create new article')}
@@ -66,11 +68,11 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                         items={[
                             ...(isAdminPanelAvailable ? [{
                                 content: t('AdminPl'),
-                                href: RoutePath.admin_panel,
+                                href: getRouteAdmin(),
                             }] : []),
                             {
                                 content: t('Profile'),
-                                href: RoutePath.profile + authData.id,
+                                href: getRouteProfile(authData.id),
                             },
                             {
                                 content: t('Log out'),
