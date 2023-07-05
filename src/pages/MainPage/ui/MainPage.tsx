@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { PageWrapper } from '@/widgets/PageWrapper';
+import { Counter } from '@/entities/Counter';
 
 const MainPage = () => {
     const { t } = useTranslation();
@@ -9,7 +10,7 @@ const MainPage = () => {
     return (
         <PageWrapper>
             {t('Main page')}
-
+            <Counter />
         </PageWrapper>
     );
 };
