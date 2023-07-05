@@ -15,6 +15,8 @@ import {
 } from '../../model/types/article';
 import cls from './AtrticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { AppImage } from '@/shared/ui/AppImage/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 
 interface AtrticleListItemProps {
   className?: string;
@@ -48,7 +50,13 @@ export const AtrticleListItem = memo((props : AtrticleListItemProps) => {
                     </div>
                     <Text title={article.title} className={cls.title} />
                     {typesArticle}
-                    <img src={article.img} className={cls.img} alt={article.title} />
+                    {/* <img src={article.img} className={cls.img} alt={article.title} /> */}
+                    <AppImage
+                        fallback={<Skeleton width="100%" height={500} />}
+                        src={article.img}
+                        className={cls.img}
+                        alt={article.title}
+                    />
                     {textBlock && (
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
@@ -78,7 +86,12 @@ export const AtrticleListItem = memo((props : AtrticleListItemProps) => {
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
-                    <img src={article.img} className={cls.img} alt={article.title} />
+                    <AppImage
+                        fallback={<Skeleton width={200} height={200} />}
+                        src={article.img}
+                        className={cls.img}
+                        alt={article.title}
+                    />
                 </div>
                 <div className={cls.infoWrapper}>
                     {typesArticle}
