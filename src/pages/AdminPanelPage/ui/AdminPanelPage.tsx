@@ -4,7 +4,7 @@ import { PageWrapper } from '@/widgets/PageWrapper';
 const AdminPanelPage = () => {
     const { t } = useTranslation();
     return (
-        <PageWrapper>
+        <PageWrapper data-testid="AdminPanelPage">
             {t('AdminPanelPage')}
         </PageWrapper>
     );

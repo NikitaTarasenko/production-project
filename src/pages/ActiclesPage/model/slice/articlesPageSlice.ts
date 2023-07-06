@@ -10,7 +10,7 @@ import {
 } from '@/entities/Article';
 
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localStorage';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 
 import { checkAmountOfCards } from '@/shared/lib/checkAmountOfCards/checkAmountOfCards';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';

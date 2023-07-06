@@ -4,7 +4,7 @@ import { PageWrapper } from '@/widgets/PageWrapper';
 const ForbiddenPage = () => {
     const { t } = useTranslation();
     return (
-        <PageWrapper>
+        <PageWrapper data-testid="ForbiddenPage">
             {t('You dont have access to this page')}
         </PageWrapper>
     );

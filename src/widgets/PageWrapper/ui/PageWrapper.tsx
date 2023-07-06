@@ -10,8 +10,9 @@ import { getScrollPosSaveScrollByPath, scrollPosSaveActions } from '@/features/S
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './PageWrapper.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageWrapperProps {
+interface PageWrapperProps extends TestProps{
   className?: string;
   children: ReactNode;
   onScrollEnd?: ()=>void;
@@ -45,6 +46,7 @@ export const PageWrapper = memo((props : PageWrapperProps) => {
             onScroll={onScroll}
             ref={wrapperRef}
             className={classNames(cls.PageWrapper, {}, [className])}
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div ref={triggerRef} className={cls.trigger} /> : null}

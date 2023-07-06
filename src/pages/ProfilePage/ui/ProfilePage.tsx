@@ -17,7 +17,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         return <Text text={t('Profile not found')} />;
     }
     return (
-        <PageWrapper className={classNames('', {}, [className])}>
+        <PageWrapper className={classNames('', {}, [className])} data-testid="ProfilePage">
             <VStack gap="16">
                 <EditableProfileCard id={id} />
             </VStack>
