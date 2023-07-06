@@ -18,17 +18,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm install
+        run: npm ci --force
       - name: build production project
         run: npm run build:prod
         if: always()
       - name: linting typescript
-        run: npm run lint-staged
+        run: npm run lint:ts
         if: always()
       - name: unit testing
         run: npm run test:unit
-      # - name: run build storybook
-      #   run: npm run storybook:build
+      - name: run build storybook
+        run: npm run storybook:build
       # - name: screenshot testing
       #   run: npm run test:ui:ci
         
