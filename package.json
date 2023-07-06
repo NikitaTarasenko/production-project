@@ -26,6 +26,9 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "postinstall": "node ./scripts/clear-cache.js"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
