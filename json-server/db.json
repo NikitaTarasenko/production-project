@@ -1072,7 +1072,14 @@
       "password": "123",
       "roles": ["MANAGER"],
       "avatar": "https://static.hdrezka.ac/i/2021/10/12/n672aa3627291by54q52r.jpg"
-    }
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": ["USER"],
+      "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
+    } 
   ],
   "profile": [
     {
