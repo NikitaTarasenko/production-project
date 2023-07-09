@@ -40,7 +40,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
 
 export const Text = memo(({
     className, title, text, theme = TextTheme.PRIMARY, align = TextAlign.LEFT, size = TextSize.M,
-    'data-testid': dataTestId = 'Text',
+    'data-testid': dataTestId = 'Text', ...otherProps
 }: TextProps) => {
     const HeaderTag = mapSizeToHeaderTag[size];
 
@@ -50,7 +50,7 @@ export const Text = memo(({
         [cls[size]]: true,
     };
     return (
-        <div className={classNames(cls.Text, mods, [className])}>
+        <div className={classNames(cls.Text, mods, [className])} {...otherProps}>
             {title && (
                 <HeaderTag
                     data-testid={`${dataTestId}.Header`}

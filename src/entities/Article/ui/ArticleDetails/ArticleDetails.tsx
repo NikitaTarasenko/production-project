@@ -74,7 +74,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         );
     } else {
         content = (
-            <>
+            <div data-testid="ArticleDetails.Info">
                 <div className={cls.avatarWrapper}>
                     <Avatar size={200} src={article?.img} className={cls.avatar} />
                 </div>
@@ -83,6 +83,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                     align={TextAlign.LEFT}
                     title={article?.subtitle}
                     size={TextSize.L}
+
                 />
                 <div className={cls.articleInfo}>
                     <SeenIco />
@@ -93,7 +94,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                     <Text text={article?.createdAt} />
                 </div>
                 {article?.blocks.map(renderBlock)}
-            </>
+            </div>
         );
     }
     return (

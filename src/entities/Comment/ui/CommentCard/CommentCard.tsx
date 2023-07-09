@@ -17,7 +17,7 @@ export const CommentCard = (props : CommentCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className, cls.isLoading])}>
+            <div className={classNames(cls.CommentCard, {}, [className, cls.isLoading])} data-testid="CommentCard.Loading">
                 <div className={cls.header}>
                     <Skeleton width={30} height={30} border="50%" />
                     <Skeleton width={100} height={16} className={cls.username} />
@@ -30,7 +30,7 @@ export const CommentCard = (props : CommentCardProps) => {
         return null;
     }
     return (
-        <div className={classNames(cls.CommentCard, {}, [className])}>
+        <div className={classNames(cls.CommentCard, {}, [className])} data-testid="CommentCard.Content">
             <AppLink to={getRouteProfile(comment?.user.id)} className={cls.header}>
                 {comment?.user.avatar ? <Avatar size={30} src={comment?.user.avatar} /> : null}
                 <Text className={cls.username} title={comment?.user.username} />
