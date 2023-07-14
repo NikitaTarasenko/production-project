@@ -19,7 +19,7 @@ export enum TextSize {
     L = 'size_l',
 
 }
-interface TextProps {
+interface TextProps{
   className?: string;
   title?: string;
   text?: string;

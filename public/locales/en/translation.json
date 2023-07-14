@@ -1,7 +1,7 @@
 {
   "Test translation": "Test translation",
   "Translate": "Translate",
-  "About page": "About us",
+  "About page": "About site",
   "Main page": "Main",
   "Articles": "Articles",
   "Article details": "Article details",
@@ -76,5 +76,13 @@
   "Close": "Close",
   "Did you like the article": "Did you like the article ?",
   "Leave feedback about it": "Leave feedback about it",
-  "AdminPanelPage": "AdminPanelPage"
+  "AdminPanelPage": "AdminPanelPage",
+  "Something went wrong with loading article": "Something went wrong with loading article",
+  "Welcome": "Welcome to my application",
+  "if": "If you want to test functionality,fisrt of all you should log-in.",
+  "roless": "You can log-in as Admin, by using username - ",
+  "and p": ", and password - ",
+  "or u": "Or log-in as User, by using username -  ",
+  "few types": "There is a few types of accessibility. If you are logged as ",
+  "few routes": ", you will have access to private routes, like AdminPanel"
 }
