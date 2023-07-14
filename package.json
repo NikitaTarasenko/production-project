@@ -9,7 +9,7 @@
     "start:dev": "concurrently \"npm start\" \"node ./json-server/index.js\"  ",
     "start:dev:vite": "concurrently \"npm run start:vite\" \"node ./json-server/index.js\"  ",
     "start:dev:server": "node ./json-server/index.js",
-    "build:prod": "webpack  --env mode=production apiUrl=https://production-project-server-pvulyej18-nikitatarasenko.vercel.app",
+    "build:prod": "webpack  --env mode=production apiUrl=https://production-project-server-5wi1rfq8h-nikitatarasenko.vercel.app",
     "build:dev": "webpack  --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
