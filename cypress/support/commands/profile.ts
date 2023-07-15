@@ -1,4 +1,4 @@
-import { selectByTestId } from 'cypress/helprers/selectById';
+import { selectByTestId } from '../../helprers/selectByTestId';
 
 export const updateProfile = (firstname:string, lastName:string) => {
     cy.getByTestId('EditableProfileCardHeader.EditButton').click();
