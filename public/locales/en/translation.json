@@ -79,7 +79,7 @@
   "AdminPanelPage": "AdminPanelPage",
   "Something went wrong with loading article": "Something went wrong with loading article",
   "Welcome": "Welcome to my application",
-  "if": "If you want to test functionality,fisrt of all you should log-in.",
+  "if": "If you want to test functionality,you must first log-in.",
   "roless": "You can log-in as Admin, by using username - ",
   "and p": ", and password - ",
   "or u": "Or log-in as User, by using username -  ",

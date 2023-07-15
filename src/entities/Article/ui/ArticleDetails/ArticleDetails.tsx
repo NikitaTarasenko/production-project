@@ -22,6 +22,7 @@ import cls from './ArticleDetails.module.scss';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { HStack, VStack } from '@/shared/ui/Stack';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -74,27 +75,33 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         );
     } else {
         content = (
-            <div data-testid="ArticleDetails.Info">
-                <div className={cls.avatarWrapper}>
+            <VStack data-testid="ArticleDetails.Info" max>
+                <HStack gap="16" className={cls.avatarWrapper}>
                     <Avatar size={200} src={article?.img} className={cls.avatar} />
-                </div>
-                <Text
-                    className={cls.title}
-                    align={TextAlign.LEFT}
-                    title={article?.subtitle}
-                    size={TextSize.L}
+                </HStack>
+                <HStack max>
+                    <Text
+                        className={cls.title}
+                        align={TextAlign.LEFT}
+                        title={article?.subtitle}
+                        size={TextSize.L}
 
-                />
-                <div className={cls.articleInfo}>
+                    />
+                </HStack>
+
+                <HStack className={cls.articleInfo}>
                     <SeenIco />
                     <Text text={String(article?.views)} />
-                </div>
-                <div className={cls.articleInfo}>
+                </HStack>
+                <HStack className={cls.articleInfo}>
                     <CalendarIco />
                     <Text text={article?.createdAt} />
-                </div>
-                {article?.blocks.map(renderBlock)}
-            </div>
+                </HStack>
+                <VStack max>
+                    {article?.blocks.map(renderBlock)}
+                </VStack>
+
+            </VStack>
         );
     }
     return (
