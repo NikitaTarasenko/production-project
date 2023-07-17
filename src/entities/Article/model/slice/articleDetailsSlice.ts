@@ -4,19 +4,16 @@ import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 import { Article } from '../types/article';
 
-const initialState:ArticleDetailsSchema = {
+const initialState: ArticleDetailsSchema = {
     isLoading: false,
     error: undefined,
     data: undefined,
-
 };
 
 export const articleDetailsSlice = createSlice({
     name: 'articleDetails',
     initialState,
-    reducers: {
-
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchArticleById.pending, (state, action) => {
             state.error = undefined;
@@ -34,7 +31,6 @@ export const articleDetailsSlice = createSlice({
             state.error = action.payload;
         });
     },
-
 });
 
 // Action creators are generated for each case reducer function

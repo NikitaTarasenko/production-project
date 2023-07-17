@@ -7,13 +7,14 @@ export const rtkApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: __API__,
         prepareHeaders: (headers) => {
-            const token = localStorage.getItem(USER_LOCAL_STORAGE_KEY) || 'app_dark_theme';
+            const token =
+                localStorage.getItem(USER_LOCAL_STORAGE_KEY) ||
+                'app_dark_theme';
             if (token) {
                 headers.set('Authorization', token);
             }
             return headers;
         },
-
     }),
     endpoints: (builder) => ({}),
 });

@@ -4,14 +4,12 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-        svgr({ exportAsDefault: true }),
-        react(),
-    ],
+    plugins: [svgr({ exportAsDefault: true }), react()],
     resolve: {
         alias: [
             {
-                find: '@', replacement: '/src',
+                find: '@',
+                replacement: '/src',
             },
         ],
     },

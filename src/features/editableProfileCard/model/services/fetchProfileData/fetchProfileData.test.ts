@@ -14,7 +14,6 @@ const data = {
     first: 'Nikita',
     city: 'asdasd',
     currency: Currency.USD,
-
 };
 
 describe('fetchProfileData.test', () => {

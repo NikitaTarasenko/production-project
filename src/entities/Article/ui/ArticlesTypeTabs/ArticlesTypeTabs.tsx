@@ -5,50 +5,54 @@ import { TabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
 import { ArticleType } from '@/entities/Article/model/consts/consts';
 
 interface ArticlesTypeTabsProps {
-  className?: string;
-  value: ArticleType;
-  onChangeType: (type: ArticleType) => void;
-
+    className?: string;
+    value: ArticleType;
+    onChangeType: (type: ArticleType) => void;
 }
-export const ArticlesTypeTabs = memo((props : ArticlesTypeTabsProps) => {
+export const ArticlesTypeTabs = memo((props: ArticlesTypeTabsProps) => {
     const { className, value, onChangeType } = props;
     const { t } = useTranslation();
 
-    const typeTabs = useMemo<TabItem[]>(() => [
-        {
-            value: ArticleType.ALL,
-            content: t('All'),
-        },
-        {
-            value: ArticleType.IT,
-            content: t('IT'),
-        },
-        {
-            value: ArticleType.PSYCHOLOGY,
-            content: t('PSYCHOLOGY'),
-        },
-        {
-            value: ArticleType.PHILOSOPHY,
-            content: t('PHILOSOPHY'),
-        },
-        {
-            value: ArticleType.MEDITATION,
-            content: t('MEDITATION'),
-        },
-        {
-            value: ArticleType.BIOLOGY,
-            content: t('BIOLOGY'),
-        },
-        {
-            value: ArticleType.FILMS,
-            content: t('FILMS'),
-        },
+    const typeTabs = useMemo<TabItem[]>(
+        () => [
+            {
+                value: ArticleType.ALL,
+                content: t('All'),
+            },
+            {
+                value: ArticleType.IT,
+                content: t('IT'),
+            },
+            {
+                value: ArticleType.PSYCHOLOGY,
+                content: t('PSYCHOLOGY'),
+            },
+            {
+                value: ArticleType.PHILOSOPHY,
+                content: t('PHILOSOPHY'),
+            },
+            {
+                value: ArticleType.MEDITATION,
+                content: t('MEDITATION'),
+            },
+            {
+                value: ArticleType.BIOLOGY,
+                content: t('BIOLOGY'),
+            },
+            {
+                value: ArticleType.FILMS,
+                content: t('FILMS'),
+            },
+        ],
+        [t],
+    );
 
-    ], [t]);
-
-    const onTabClick = useCallback((tab: TabItem) => {
-        onChangeType(tab.value as ArticleType);
-    }, [onChangeType]);
+    const onTabClick = useCallback(
+        (tab: TabItem) => {
+            onChangeType(tab.value as ArticleType);
+        },
+        [onChangeType],
+    );
 
     return (
         <Tabs

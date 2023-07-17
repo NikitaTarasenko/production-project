@@ -2,7 +2,6 @@ import {
     PayloadAction,
     createEntityAdapter,
     createSlice,
-
 } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { Comment } from '@/entities/Comment';
@@ -12,34 +11,34 @@ import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId';
 const commentsAdapter = createEntityAdapter<Comment>({
     // Assume IDs are stored in a field other than `book.id`
     selectId: (comment) => comment.id,
-
 });
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
+    (state) =>
+        state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
 );
 const articleDetailsCommentsSlice = createSlice({
     name: 'articleDetailsCommentsSlice',
-    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
-        ids: ['1', '2'],
-        entities: {
-            1: {
-                id: '1',
-                text: 'comment 1',
-                user: { id: '1', username: 'user' },
+    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>(
+        {
+            ids: ['1', '2'],
+            entities: {
+                1: {
+                    id: '1',
+                    text: 'comment 1',
+                    user: { id: '1', username: 'user' },
+                },
+                2: {
+                    id: '2',
+                    text: 'comment 2',
+                    user: { id: '2', username: 'user 2' },
+                },
             },
-            2: {
-                id: '2',
-                text: 'comment 2',
-                user: { id: '2', username: 'user 2' },
-            },
+            error: undefined,
+            isLoading: false,
         },
-        error: undefined,
-        isLoading: false,
-    }),
-    reducers: {
-
-    },
+    ),
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchCommentsByArticleId.pending, (state) => {
             state.error = undefined;
@@ -57,7 +56,7 @@ const articleDetailsCommentsSlice = createSlice({
             state.error = action.payload;
         });
     },
-
 });
 
-export const { reducer: articleDetailsCommentsReducer } = articleDetailsCommentsSlice;
+export const { reducer: articleDetailsCommentsReducer } =
+    articleDetailsCommentsSlice;

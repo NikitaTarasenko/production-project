@@ -5,12 +5,17 @@ import { LoginModal } from '@/features/AuthByUserName';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import {
-    getRouteAdmin, getRouteArticleCreate, getRouteProfile,
+    getRouteAdmin,
+    getRouteArticleCreate,
+    getRouteProfile,
 } from '@/shared/const/router';
 
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
@@ -21,7 +26,7 @@ import { NotificationButton } from '@/features/notificationButton';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
-  className?: string;
+    className?: string;
 }
 export const NavBar = memo(({ className }: NavBarProps) => {
     const { t } = useTranslation('');
@@ -66,10 +71,14 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                         direction="bottom left"
                         className={cls.dropdown}
                         items={[
-                            ...(isAdminPanelAvailable ? [{
-                                content: t('AdminPl'),
-                                href: getRouteAdmin(),
-                            }] : []),
+                            ...(isAdminPanelAvailable
+                                ? [
+                                      {
+                                          content: t('AdminPl'),
+                                          href: getRouteAdmin(),
+                                      },
+                                  ]
+                                : []),
                             {
                                 content: t('Profile'),
                                 href: getRouteProfile(authData.id),
@@ -82,7 +91,6 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                         trigger={<Avatar size={35} src={authData.avatar} />}
                     />
                 </HStack>
-
             </header>
         );
     }
@@ -96,7 +104,9 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 {t('Log in')}
             </Button>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            { isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
+            {isAuthModal && (
+                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+            )}
         </header>
     );
 });

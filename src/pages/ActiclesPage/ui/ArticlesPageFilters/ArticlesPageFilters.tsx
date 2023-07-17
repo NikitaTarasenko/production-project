@@ -12,7 +12,11 @@ import {
 } from '@/pages/ActiclesPage/model/selectors/articlesPageSelector';
 import { articlesPageActions } from '@/pages/ActiclesPage/model/slice/articlesPageSlice';
 import {
-    ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector, ArticlesTypeTabs,
+    ArticleSortField,
+    ArticleSortSelector,
+    ArticleView,
+    ArticleViewSelector,
+    ArticlesTypeTabs,
 } from '@/entities/Article';
 import { Card } from '@/shared/ui/Card/Card';
 import { Input } from '@/shared/ui/Input/Input';
@@ -23,9 +27,9 @@ import { ArticleType } from '@/entities/Article/model/consts/consts';
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
-  className?: string;
+    className?: string;
 }
-export const ArticlesPageFilters = memo((props : ArticlesPageFiltersProps) => {
+export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const { className } = props;
     const { t } = useTranslation('');
     const dispatch = useAppDispatch();
@@ -41,38 +45,52 @@ export const ArticlesPageFilters = memo((props : ArticlesPageFiltersProps) => {
 
     const debounceFetchData = useDebounce(fetchData, 500);
 
-    const onChangeView = useCallback((view: ArticleView) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
+    const onChangeView = useCallback(
+        (view: ArticleView) => {
+            dispatch(articlesPageActions.setView(view));
+        },
+        [dispatch],
+    );
 
-    const onChangeSort = useCallback((newSort: ArticleSortField) => {
-        dispatch(articlesPageActions.setSort(newSort));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+    const onChangeSort = useCallback(
+        (newSort: ArticleSortField) => {
+            dispatch(articlesPageActions.setSort(newSort));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [dispatch, fetchData],
+    );
 
-    const onChangeOrder = useCallback((newOrder: SortOrder) => {
-        dispatch(articlesPageActions.setOrder(newOrder));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+    const onChangeOrder = useCallback(
+        (newOrder: SortOrder) => {
+            dispatch(articlesPageActions.setOrder(newOrder));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [dispatch, fetchData],
+    );
 
-    const onChangeSearch = useCallback((newSearch: string) => {
-        dispatch(articlesPageActions.setSearch(newSearch));
-        dispatch(articlesPageActions.setPage(1));
-        debounceFetchData();
-    }, [dispatch, debounceFetchData]);
+    const onChangeSearch = useCallback(
+        (newSearch: string) => {
+            dispatch(articlesPageActions.setSearch(newSearch));
+            dispatch(articlesPageActions.setPage(1));
+            debounceFetchData();
+        },
+        [dispatch, debounceFetchData],
+    );
 
-    const onChangeType = useCallback((value: ArticleType) => {
-        dispatch(articlesPageActions.setType(value));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+    const onChangeType = useCallback(
+        (value: ArticleType) => {
+            dispatch(articlesPageActions.setType(value));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [dispatch, fetchData],
+    );
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
             <div className={cls.sortWrapper}>
-
                 <ArticleSortSelector
                     order={order}
                     sort={sort}
@@ -83,7 +101,11 @@ export const ArticlesPageFilters = memo((props : ArticlesPageFiltersProps) => {
             </div>
 
             <Card className={cls.search}>
-                <Input placeholder={t('Search')} onChange={onChangeSearch} value={search} />
+                <Input
+                    placeholder={t('Search')}
+                    onChange={onChangeSearch}
+                    value={search}
+                />
             </Card>
             <ArticlesTypeTabs
                 className={cls.tabs}

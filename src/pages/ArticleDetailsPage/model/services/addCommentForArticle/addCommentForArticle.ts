@@ -8,11 +8,13 @@ import { getArticleDetailsData } from '@/entities/Article/model/selectors/articl
 import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId';
 
 // First, create the thunk
-export const addCommentForArticle = createAsyncThunk<Comment, string, ThunkConfig<string>>(
+export const addCommentForArticle = createAsyncThunk<
+    Comment,
+    string,
+    ThunkConfig<string>
+>(
     'articleDetails/addCommentForArticle',
-    async (text, {
-        extra, rejectWithValue, dispatch, getState,
-    }) => {
+    async (text, { extra, rejectWithValue, dispatch, getState }) => {
         const userData = getUserAuthData(getState());
 
         const article = getArticleDetailsData(getState());

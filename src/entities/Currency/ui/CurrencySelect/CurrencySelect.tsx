@@ -6,10 +6,10 @@ import { Currency } from '../../model/types/currency';
 import cls from './CurrencySelect.module.scss';
 
 interface CurrencySelectProps {
-  className?: string;
-  value?: Currency;
-  onChange?: (value: Currency) => void;
-  readOnly? : boolean;
+    className?: string;
+    value?: Currency;
+    onChange?: (value: Currency) => void;
+    readOnly?: boolean;
 }
 
 const options = [
@@ -18,28 +18,30 @@ const options = [
     { value: Currency.UAH, content: Currency.UAH },
 ];
 
-export const CurrencySelect = memo(({
-    className, value, onChange, readOnly,
-}: CurrencySelectProps) => {
-    const { t } = useTranslation('');
+export const CurrencySelect = memo(
+    ({ className, value, onChange, readOnly }: CurrencySelectProps) => {
+        const { t } = useTranslation('');
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Currency);
-    }, [onChange]);
+        const onChangeHandler = useCallback(
+            (value: string) => {
+                onChange?.(value as Currency);
+            },
+            [onChange],
+        );
 
-    const mods: Modes = {
-        [cls.readonly]: readOnly,
-    };
-    return (
-        <ListBox
-            className={classNames(cls.currency, mods, [className])}
-            onChange={onChangeHandler}
-            value={value}
-            label={t('Select currency')}
-            items={options}
-            readonly={readOnly}
-            direction="top right"
-        />
-
-    );
-});
+        const mods: Modes = {
+            [cls.readonly]: readOnly,
+        };
+        return (
+            <ListBox
+                className={classNames(cls.currency, mods, [className])}
+                onChange={onChangeHandler}
+                value={value}
+                label={t('Select currency')}
+                items={options}
+                readonly={readOnly}
+                direction="top right"
+            />
+        );
+    },
+);

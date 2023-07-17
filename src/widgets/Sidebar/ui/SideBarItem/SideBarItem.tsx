@@ -7,7 +7,7 @@ import { SidebarItemType } from '@/widgets/Sidebar/model/types/SidebarItemType';
 import cls from './SideBarItem.module.scss';
 
 interface SideBarItemProps {
-    item : SidebarItemType ;
+    item: SidebarItemType;
     collapsed: boolean;
 }
 export const SideBarItem = memo(({ item, collapsed }: SideBarItemProps) => {
@@ -24,7 +24,7 @@ export const SideBarItem = memo(({ item, collapsed }: SideBarItemProps) => {
             theme={AppLinkTheme.SECONDARY}
             to={item.path}
         >
-            { !collapsed ? t(item.text) : <item.Icon className={cls.icon} />}
+            {!collapsed ? t(item.text) : <item.Icon className={cls.icon} />}
         </AppLink>
     );
 });

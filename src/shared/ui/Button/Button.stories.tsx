@@ -17,7 +17,6 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     children: 'Text',
-
 };
 export const PrimarySizeL = Template.bind({});
 PrimarySizeL.args = {
@@ -89,5 +88,4 @@ Disabled.args = {
     children: 'Text',
     theme: ThemeButton.OUTLINE,
     disabled: true,
-
 };

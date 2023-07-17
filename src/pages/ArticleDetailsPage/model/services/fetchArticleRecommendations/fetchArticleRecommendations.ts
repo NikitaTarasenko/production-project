@@ -4,15 +4,17 @@ import { Article } from '@/entities/Article';
 
 // First, create the thunk
 
-export const fetchArticlesRecommendations = createAsyncThunk<Article[], void, ThunkConfig<string>>(
+export const fetchArticlesRecommendations = createAsyncThunk<
+    Article[],
+    void,
+    ThunkConfig<string>
+>(
     'articlesDetails/fetchArticlesRecommendations',
     async (props, { extra, rejectWithValue }) => {
         try {
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {
-
                     _limit: 4,
-
                 },
             });
 

@@ -13,31 +13,33 @@ import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 
 interface RatingCardProps {
-  className?: string;
-  title? : string;
-feedbackTitle?: string;
-hasFeedback?: boolean;
-onCancel?: (starsCount: number)=> void;
-onAccept?: (starsCount: number, feedback?: string)=> void;
+    className?: string;
+    title?: string;
+    feedbackTitle?: string;
+    hasFeedback?: boolean;
+    onCancel?: (starsCount: number) => void;
+    onAccept?: (starsCount: number, feedback?: string) => void;
 }
-export const RatingCard = memo((props : RatingCardProps) => {
-    const {
-        className, title, feedbackTitle, hasFeedback, onCancel, onAccept,
-    } = props;
+export const RatingCard = memo((props: RatingCardProps) => {
+    const { className, title, feedbackTitle, hasFeedback, onCancel, onAccept } =
+        props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [feedback, setFeedback] = useState('');
     const [starsCount, setStarsCount] = useState(0);
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (hasFeedback) {
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
             setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-        setIsModalOpen(true);
-    }, [hasFeedback, onAccept]);
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandler = useCallback(() => {
         onAccept?.(starsCount, feedback);
@@ -62,14 +64,21 @@ export const RatingCard = memo((props : RatingCardProps) => {
                 <Button onClick={acceptHandler} data-testid="RatingCard.Send">
                     {t('Send')}
                 </Button>
-                <Button onClick={onCancelHandler} theme={ThemeButton.OUTLINE_RED} data-testid="RatingCard.Close">
+                <Button
+                    onClick={onCancelHandler}
+                    theme={ThemeButton.OUTLINE_RED}
+                    data-testid="RatingCard.Close"
+                >
                     {t('Close')}
                 </Button>
             </HStack>
         </VStack>
     );
     return (
-        <Card className={classNames(cls.RatingCard, {}, [className])} data-testid="RatingCard">
+        <Card
+            className={classNames(cls.RatingCard, {}, [className])}
+            data-testid="RatingCard"
+        >
             <VStack align="center" gap="8">
                 <Text title={title} />
                 <StarRating size={40} onSelect={onSelectStars} />

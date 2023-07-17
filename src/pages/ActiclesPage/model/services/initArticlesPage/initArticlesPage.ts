@@ -3,14 +3,15 @@ import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { SortOrder } from '@/shared/types/sort';
 import { ArticleSortField } from '@/entities/Article';
 import { checkAmountOfCards } from '@/shared/lib/checkAmountOfCards/checkAmountOfCards';
-import {
-    getArticlesPageInited,
-
-} from '../../selectors/articlesPageSelector';
+import { getArticlesPageInited } from '../../selectors/articlesPageSelector';
 import { articlesPageActions } from '../../slice/articlesPageSlice';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
-export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(
+export const initArticlesPage = createAsyncThunk<
+    void,
+    URLSearchParams,
+    ThunkConfig<string>
+>(
     'articlesPage/initArticlesPage',
     async (searchParams, { getState, dispatch }) => {
         const isInited = getArticlesPageInited(getState());
@@ -31,9 +32,11 @@ export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkCon
                 dispatch(articlesPageActions.setSearch(searchFormUrl));
             }
             dispatch(articlesPageActions.initState());
-            dispatch(fetchArticlesList({
-                limit: checkAmountOfCards(),
-            }));
+            dispatch(
+                fetchArticlesList({
+                    limit: checkAmountOfCards(),
+                }),
+            );
         }
     },
 );

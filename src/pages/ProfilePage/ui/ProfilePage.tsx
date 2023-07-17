@@ -7,17 +7,20 @@ import { EditableProfileCard } from '@/features/editableProfileCard/ui/EditableP
 import { Text } from '@/shared/ui/Text/Text';
 
 interface ProfilePageProps {
-  className?: string;
+    className?: string;
 }
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     const { t } = useTranslation('');
 
     if (!id) {
         return <Text text={t('Profile not found')} />;
     }
     return (
-        <PageWrapper className={classNames('', {}, [className])} data-testid="ProfilePage">
+        <PageWrapper
+            className={classNames('', {}, [className])}
+            data-testid="ProfilePage"
+        >
             <VStack gap="16">
                 <EditableProfileCard id={id} />
             </VStack>

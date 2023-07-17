@@ -11,7 +11,6 @@ describe('articleDetails.test', () => {
         const data = {
             id: '1',
             title: 'subtitle',
-
         };
         const state: DeepPartial<StateSchema> = {
             articleDetails: {
@@ -31,9 +30,7 @@ describe('articleDetails.test', () => {
     });
     test('should return  IsLoading false', () => {
         const state: DeepPartial<StateSchema> = {
-            articleDetails: {
-
-            },
+            articleDetails: {},
         };
         expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(false);
     });

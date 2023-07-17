@@ -2,7 +2,10 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch';
 import { PageWrapper } from '@/widgets/PageWrapper';
 import cls from './ArticlesPage.module.scss';
@@ -13,7 +16,7 @@ import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ActiclesPageProps {
-  className?: string;
+    className?: string;
 }
 const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
@@ -33,7 +36,11 @@ const ArticlesPage = ({ className }: ActiclesPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-            <PageWrapper onScrollEnd={onLoadNextPart} className={classNames(cls.ActiclesPage, {}, [className])} data-testid="ArticlesPage">
+            <PageWrapper
+                onScrollEnd={onLoadNextPart}
+                className={classNames(cls.ActiclesPage, {}, [className])}
+                data-testid="ArticlesPage"
+            >
                 <ArticlesPageFilters />
                 <ArticleInfiniteList className={cls.list} />
             </PageWrapper>

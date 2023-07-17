@@ -12,43 +12,46 @@ import { getCanEditArticle } from '@/pages/ArticleDetailsPage/model/selectors/ar
 import cls from './ArticleDetailsPageHeader.module.scss';
 
 interface ArticleDetailsPageHeaderProps {
-  className?: string;
+    className?: string;
 }
-export const ArticleDetailsPageHeader = memo((props : ArticleDetailsPageHeaderProps) => {
-    const { className } = props;
-    const { t } = useTranslation();
-    const navigate = useNavigate();
-    const userData = useSelector(getUserAuthData);
-    const article = useSelector(getArticleDetailsData);
-    const canEdit = useSelector(getCanEditArticle);
+export const ArticleDetailsPageHeader = memo(
+    (props: ArticleDetailsPageHeaderProps) => {
+        const { className } = props;
+        const { t } = useTranslation();
+        const navigate = useNavigate();
+        const userData = useSelector(getUserAuthData);
+        const article = useSelector(getArticleDetailsData);
+        const canEdit = useSelector(getCanEditArticle);
 
-    const onBackToList = useCallback(() => {
-        navigate(getRouteArticles());
-    }, [navigate]);
+        const onBackToList = useCallback(() => {
+            navigate(getRouteArticles());
+        }, [navigate]);
 
-    const oEditArticle = useCallback(() => {
-        if (article) {
-            navigate(getRouteEdit(article.id));
-        }
-    }, [article, navigate]);
+        const oEditArticle = useCallback(() => {
+            if (article) {
+                navigate(getRouteEdit(article.id));
+            }
+        }, [article, navigate]);
 
-    return (
-        <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
-            <Button
-                theme={ThemeButton.OUTLINE}
-                onClick={onBackToList}
+        return (
+            <div
+                className={classNames(cls.ArticleDetailsPageHeader, {}, [
+                    className,
+                ])}
             >
-                {t('Back to list')}
-            </Button>
-            { canEdit && (
-                <Button
-                    className={cls.editBtn}
-                    theme={ThemeButton.OUTLINE_RED}
-                    onClick={oEditArticle}
-                >
-                    {t('Edit')}
+                <Button theme={ThemeButton.OUTLINE} onClick={onBackToList}>
+                    {t('Back to list')}
                 </Button>
-            )}
-        </div>
-    );
-});
+                {canEdit && (
+                    <Button
+                        className={cls.editBtn}
+                        theme={ThemeButton.OUTLINE_RED}
+                        onClick={oEditArticle}
+                    >
+                        {t('Edit')}
+                    </Button>
+                )}
+            </div>
+        );
+    },
+);

@@ -1,11 +1,11 @@
 {
-    "id":"1",
-    "first":"test",
-    "lastName":"user",
-    "age":"12",
-    "currency":"EUR",
-    "country":"USA",
+    "id": "1",
+    "first": "test",
+    "lastName": "user",
+    "age": "12",
+    "currency": "EUR",
+    "country": "USA",
     "city": "Kyiv",
-    "username":"testuser",
-    "avatar":"https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
+    "username": "testuser",
+    "avatar": "https://media.tenor.com/Q7sPiGp7hhMAAAAC/patrick-bateman-smile.gif"
 }

@@ -4,12 +4,15 @@ import cls from './NotFoundPage.module.scss';
 import { PageWrapper } from '@/widgets/PageWrapper';
 
 interface NotFoundPageProps {
-  className?: string;
+    className?: string;
 }
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
     const { t } = useTranslation();
     return (
-        <PageWrapper className={classNames(cls.NotFoundPage, {}, [className])} data-testid="NotFoundPage">
+        <PageWrapper
+            className={classNames(cls.NotFoundPage, {}, [className])}
+            data-testid="NotFoundPage"
+        >
             {t('NotFoundPage')}
         </PageWrapper>
     );

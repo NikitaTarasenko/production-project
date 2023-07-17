@@ -1,6 +1,6 @@
 // <Адрес страницы, позиция скролла>
 export type ScrollSchema = Record<string, number>;
 
-export interface ScrollPosSaveSchema{
+export interface ScrollPosSaveSchema {
     scroll: ScrollSchema;
 }

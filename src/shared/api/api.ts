@@ -7,7 +7,8 @@ export const $api = axios.create({
 
 $api.interceptors.request.use((config) => {
     if (config.headers) {
-        config.headers.Authorization = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_dark_theme';
+        config.headers.Authorization =
+            localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_dark_theme';
     }
     return config;
 });

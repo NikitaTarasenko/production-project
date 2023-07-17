@@ -5,19 +5,19 @@ export enum ArticleType {
     PHILOSOPHY = 'Philosophy',
     BIOLOGY = 'Biology',
     MEDITATION = 'Meditation',
-    FILMS = 'Films'
+    FILMS = 'Films',
 }
 export enum ArticleSortField {
     VIEWS = 'views',
     TITLE = 'title',
-    CREATED = 'createdAt'
+    CREATED = 'createdAt',
 }
 export enum ArticleBlockType {
     CODE = 'CODE',
     IMAGE = 'IMAGE',
-    TEXT = 'TEXT'
+    TEXT = 'TEXT',
 }
 export enum ArticleView {
     BIG = 'BIG',
-    SMALL = 'SMALL'
+    SMALL = 'SMALL',
 }

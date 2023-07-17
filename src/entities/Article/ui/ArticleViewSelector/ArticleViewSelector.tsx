@@ -8,9 +8,9 @@ import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
-  className?: string;
-  view: ArticleView;
-  onViewClick?: (view: ArticleView) => void;
+    className?: string;
+    view: ArticleView;
+    onViewClick?: (view: ArticleView) => void;
 }
 const viewTypes = [
     {
@@ -22,7 +22,7 @@ const viewTypes = [
         icon: <BigListIcon />,
     },
 ];
-export const ArticleViewSelector = memo((props : ArticleViewSelectorProps) => {
+export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, view, onViewClick } = props;
     const { t } = useTranslation();
 
@@ -33,7 +33,9 @@ export const ArticleViewSelector = memo((props : ArticleViewSelectorProps) => {
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {viewTypes.map((viewType) => (
                 <Button
-                    className={classNames(cls.btn, { [cls.notSelected]: viewType.view !== view })}
+                    className={classNames(cls.btn, {
+                        [cls.notSelected]: viewType.view !== view,
+                    })}
                     key={viewType.view}
                     theme={ThemeButton.CLEAR}
                     onClick={onClick(viewType.view)}

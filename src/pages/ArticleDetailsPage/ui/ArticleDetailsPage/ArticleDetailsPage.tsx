@@ -3,7 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArticleDetails } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { PageWrapper } from '@/widgets/PageWrapper';
 import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
 
@@ -14,26 +17,30 @@ import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetails
 import { RatingCard } from '@/entities/Rating';
 
 interface ArticleDetailsPageProps {
-  className?: string;
+    className?: string;
 }
 
 const reducers: ReducersList = {
     articleDetailsPage: articleDetailsPageReducer,
 };
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-    const { id } = useParams<{id:string}>();
+    const { id } = useParams<{ id: string }>();
     const { t } = useTranslation('');
 
     if (!id) {
         return (
-            <PageWrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                { t('Article not found')}
+            <PageWrapper
+                className={classNames(cls.ArticleDetailsPage, {}, [className])}
+            >
+                {t('Article not found')}
             </PageWrapper>
         );
     }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <PageWrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <PageWrapper
+                className={classNames(cls.ArticleDetailsPage, {}, [className])}
+            >
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <RatingCard

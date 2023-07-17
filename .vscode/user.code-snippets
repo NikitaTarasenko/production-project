@@ -1,63 +1,63 @@
 {
-	// Place your project workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	"Print to console": {
-		"scope": "javascript,typescript, typescriptreact",
-		"prefix": "cc",
-		"body": [
-			"import { classNames} from '@/shared/lib/classNames/classNames';",
-			"import cls from './${1:$TM_FILENAME_BASE}.module.scss';",
-			"import { useTranslation } from 'react-i18next';",
-			"import { memo } from 'react';",
-			"",
-			"interface ${1:$TM_FILENAME_BASE}Props {",
-			"  className?: string;",
-			"}",
-			"export const ${1:$TM_FILENAME_BASE} = memo((props : ${1:$TM_FILENAME_BASE}Props) => {",
-			"const { className } = props;",
-			"const { t } = useTranslation();",
-			"",
-			" return <div className={classNames(cls.${1:$TM_FILENAME_BASE}, {}, [className])}>",
-			"",
-			"</div>;",
-			"});"
-		],
-		"description": "fast component"
-	},
-	"test template": {
-		"scope": "javascript,typescript, typescriptreact",
-		"prefix": "tt",
-		"body": [
-			"describe('${1:$TM_FILENAME_BASE}', () => {",
-			"test('', () => {",
-			"expect().toEqual();",
-			"});",
-			"});"
-		],
-		"description": "fast component"
-	},
-	"slices template": {
-		"scope": "javascript,typescript, typescriptreact",
-		"prefix": "ss",
-		"body": [
-			"import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
-			"",
-			"const initialState: Schema = {};",
-			"",
-			"export const ${1:$TM_FILENAME_BASE} = createSlice({",
-			"name: '${1:$TM_FILENAME_BASE}',",
-			"initialState,",
-			"reducers: {},",
-			"});",
-			"",
-			"export const { actions: ScrollPosSaveActions } = ${1:$TM_FILENAME_BASE};",
-			"export const { reducer: ScrollPosSaveReducer } = ${1:$TM_FILENAME_BASE};",
-		],
-		"description": "fast component"
-	}
+    // Place your project workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+    // Placeholders with the same ids are connected.
+    // Example:
+    "Print to console": {
+        "scope": "javascript,typescript, typescriptreact",
+        "prefix": "cc",
+        "body": [
+            "import { classNames} from '@/shared/lib/classNames/classNames';",
+            "import cls from './${1:$TM_FILENAME_BASE}.module.scss';",
+            "import { useTranslation } from 'react-i18next';",
+            "import { memo } from 'react';",
+            "",
+            "interface ${1:$TM_FILENAME_BASE}Props {",
+            "  className?: string;",
+            "}",
+            "export const ${1:$TM_FILENAME_BASE} = memo((props : ${1:$TM_FILENAME_BASE}Props) => {",
+            "const { className } = props;",
+            "const { t } = useTranslation();",
+            "",
+            " return <div className={classNames(cls.${1:$TM_FILENAME_BASE}, {}, [className])}>",
+            "",
+            "</div>;",
+            "});"
+        ],
+        "description": "fast component"
+    },
+    "test template": {
+        "scope": "javascript,typescript, typescriptreact",
+        "prefix": "tt",
+        "body": [
+            "describe('${1:$TM_FILENAME_BASE}', () => {",
+            "test('', () => {",
+            "expect().toEqual();",
+            "});",
+            "});"
+        ],
+        "description": "fast component"
+    },
+    "slices template": {
+        "scope": "javascript,typescript, typescriptreact",
+        "prefix": "ss",
+        "body": [
+            "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
+            "",
+            "const initialState: Schema = {};",
+            "",
+            "export const ${1:$TM_FILENAME_BASE} = createSlice({",
+            "name: '${1:$TM_FILENAME_BASE}',",
+            "initialState,",
+            "reducers: {},",
+            "});",
+            "",
+            "export const { actions: ScrollPosSaveActions } = ${1:$TM_FILENAME_BASE};",
+            "export const { reducer: ScrollPosSaveReducer } = ${1:$TM_FILENAME_BASE};"
+        ],
+        "description": "fast component"
+    }
 }

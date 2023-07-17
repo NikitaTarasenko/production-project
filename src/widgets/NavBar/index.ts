@@ -1,5 +1,3 @@
 import { NavBar } from './ui/NavBar';
 
-export {
-    NavBar,
-};
+export { NavBar };

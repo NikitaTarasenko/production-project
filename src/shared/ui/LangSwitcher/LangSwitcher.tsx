@@ -6,7 +6,7 @@ import Language from '@/shared/assets/icons/language.svg';
 import { Button, ThemeButton } from '../Button/Button';
 
 interface LangSwitcherProps {
-  className?: string;
+    className?: string;
 }
 export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

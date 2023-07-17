@@ -9,23 +9,31 @@ import { AtrticleListItem } from '../AtrticleListItem/AtrticleListItem';
 import { AtrticleListSkeleton } from '../AtrticleListItem/ArticleListItemSkeleton';
 
 interface ArticleListProps {
-  className?: string;
-  articles: Article[];
-  isLoading?: boolean;
-  view? : ArticleView;
-  target? : HTMLAttributeAnchorTarget
+    className?: string;
+    articles: Article[];
+    isLoading?: boolean;
+    view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => (
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.SMALL ? checkAmountOfCards() : 3)
+        .fill(0)
+        .map((item, index) => (
+            <AtrticleListSkeleton
+                className={cls.card}
+                key={index}
+                view={view}
+            />
+        ));
 
-    new Array(view === ArticleView.SMALL ? checkAmountOfCards() : 3).fill(0).map((item, index) => (
-        <AtrticleListSkeleton className={cls.card} key={index} view={view} />))
-
-);
-
-export const ArticleList = memo((props : ArticleListProps) => {
+export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className, isLoading, view = ArticleView.SMALL, articles, target,
+        className,
+        isLoading,
+        view = ArticleView.SMALL,
+        articles,
+        target,
     } = props;
     const { t } = useTranslation();
 
@@ -40,12 +48,11 @@ export const ArticleList = memo((props : ArticleListProps) => {
         />
     );
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])} data-testid="ArticleList">
-            {
-                articles.length > 0
-                    ? articles.map(renderArticle)
-                    : null
-            }
+        <div
+            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+            data-testid="ArticleList"
+        >
+            {articles.length > 0 ? articles.map(renderArticle) : null}
             {isLoading && getSkeletons(view)}
         </div>
     );

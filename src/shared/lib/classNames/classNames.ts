@@ -1,10 +1,10 @@
-export type Modes = Record<string, boolean | string | undefined>
+export type Modes = Record<string, boolean | string | undefined>;
 
 export function classNames(
     cls: string,
-    mods:Modes = {},
+    mods: Modes = {},
     additional: Array<string | undefined> = [],
-):string {
+): string {
     return [
         cls,
         ...additional.filter(Boolean),

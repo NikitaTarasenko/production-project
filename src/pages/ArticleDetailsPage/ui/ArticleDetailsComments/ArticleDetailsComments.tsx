@@ -13,32 +13,42 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDIspatch/useAppDispatch
 import cls from './ArticleDetailsComments.module.scss';
 
 interface ArticleDetailsCommentsProps {
-  className?: string;
-  id: string;
+    className?: string;
+    id: string;
 }
-export const ArticleDetailsComments = memo((props : ArticleDetailsCommentsProps) => {
-    const { className, id } = props;
-    const { t } = useTranslation();
-    const dispatch = useAppDispatch();
-    const comments = useSelector(getArticleComments.selectAll);
-    const isLoading = useSelector(getArticleCommentsIsLoading);
+export const ArticleDetailsComments = memo(
+    (props: ArticleDetailsCommentsProps) => {
+        const { className, id } = props;
+        const { t } = useTranslation();
+        const dispatch = useAppDispatch();
+        const comments = useSelector(getArticleComments.selectAll);
+        const isLoading = useSelector(getArticleCommentsIsLoading);
 
-    useEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
-    }, [dispatch, id]);
+        useEffect(() => {
+            dispatch(fetchCommentsByArticleId(id));
+        }, [dispatch, id]);
 
-    const onSendComment = useCallback((text: string) => {
-        dispatch(addCommentForArticle(text));
-    }, [dispatch]);
+        const onSendComment = useCallback(
+            (text: string) => {
+                dispatch(addCommentForArticle(text));
+            },
+            [dispatch],
+        );
 
-    return (
-        <div className={classNames(cls.ArticleDetailsComments, {}, [className])}>
-            <Text size={TextSize.L} className={cls.commentTitle} title={t('Comments')} />
-            <AddCommentForm onSendComment={onSendComment} />
-            <CommentList
-                isLoading={isLoading}
-                comments={comments}
-            />
-        </div>
-    );
-});
+        return (
+            <div
+                className={classNames(cls.ArticleDetailsComments, {}, [
+                    className,
+                ])}
+            >
+                <Text
+                    size={TextSize.L}
+                    className={cls.commentTitle}
+                    title={t('Comments')}
+                />
+                <AddCommentForm onSendComment={onSendComment} />
+                <CommentList isLoading={isLoading} comments={comments} />
+            </div>
+        );
+    },
+);

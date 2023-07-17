@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {
-    Suspense, useEffect,
-} from 'react';
+import { Suspense, useEffect } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { NavBar } from '@/widgets/NavBar';
 import { Sidebar } from '@/widgets/Sidebar';
@@ -34,7 +32,7 @@ const App = () => {
                 <NavBar />
                 <div className="content-page">
                     <Sidebar />
-                    { mounted && <AppRouter />}
+                    {mounted && <AppRouter />}
                 </div>
             </Suspense>
         </div>

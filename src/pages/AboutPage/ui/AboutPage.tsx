@@ -11,10 +11,7 @@ const AboutPage = () => {
     return (
         <PageWrapper data-testid="AboutPage">
             <VStack gap="32">
-                <Text
-                    size={TextSize.L}
-                    title={t('About page')}
-                />
+                <Text size={TextSize.L} title={t('About page')} />
                 <VStack gap="8">
                     <Text text="Замість тисячі слів..." />
                     <AppLink
@@ -27,7 +24,6 @@ const AboutPage = () => {
                     </AppLink>
                 </VStack>
             </VStack>
-
         </PageWrapper>
     );
 };

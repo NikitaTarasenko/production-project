@@ -13,7 +13,6 @@ const data = {
     first: 'Nikita',
     city: 'asdasd',
     currency: Currency.USD,
-
 };
 
 describe('fetchProfileData.test', () => {
@@ -24,7 +23,11 @@ describe('fetchProfileData.test', () => {
     });
 
     test('no name and lastName', async () => {
-        const result = validateProfileData({ ...data, first: '', lastName: '' });
+        const result = validateProfileData({
+            ...data,
+            first: '',
+            lastName: '',
+        });
 
         expect(result).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
     });
@@ -41,9 +44,11 @@ describe('fetchProfileData.test', () => {
     });
 
     test('nothing', async () => {
-        const result = validateProfileData({ });
-        expect(result).toEqual(
-            [ValidateProfileError.INCORRECT_USER_DATA, ValidateProfileError.INCORRECT_AGE, ValidateProfileError.INCORRECT_CITY],
-        );
+        const result = validateProfileData({});
+        expect(result).toEqual([
+            ValidateProfileError.INCORRECT_USER_DATA,
+            ValidateProfileError.INCORRECT_AGE,
+            ValidateProfileError.INCORRECT_CITY,
+        ]);
     });
 });

@@ -8,9 +8,9 @@ import cls from './NotificationList.module.scss';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 
 interface NotificationListProps {
-  className?: string;
+    className?: string;
 }
-export const NotificationList = memo((props : NotificationListProps) => {
+export const NotificationList = memo((props: NotificationListProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const { data, isLoading } = useNotifications(null, {
@@ -19,7 +19,11 @@ export const NotificationList = memo((props : NotificationListProps) => {
 
     if (isLoading) {
         return (
-            <VStack gap="16" max className={classNames(cls.NotificationList, {}, [className])}>
+            <VStack
+                gap="16"
+                max
+                className={classNames(cls.NotificationList, {}, [className])}
+            >
                 <Skeleton width="100%" border="8px" height="80px" />
                 <Skeleton width="100%" border="8px" height="80px" />
                 <Skeleton width="100%" border="8px" height="80px" />

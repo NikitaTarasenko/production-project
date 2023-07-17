@@ -14,7 +14,6 @@ describe('getProfileForm.test', () => {
             first: 'Nikita',
             city: 'asdasd',
             currency: Currency.USD,
-
         };
         const state: DeepPartial<StateSchema> = {
             profile: {

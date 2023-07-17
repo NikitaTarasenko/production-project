@@ -32,12 +32,10 @@ Error.args = {
 export const onlyTitle = Template.bind({});
 onlyTitle.args = {
     title: 'Primary',
-
 };
 
 export const onlyText = Template.bind({});
 onlyText.args = {
-
     text: 'Primary Text',
 };
 
@@ -51,13 +49,11 @@ PrimaryLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 export const onlyTitleLight = Template.bind({});
 onlyTitleLight.args = {
     title: 'Primary',
-
 };
 onlyTitleLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const onlyTextLight = Template.bind({});
 onlyTextLight.args = {
-
     text: 'Primary Text',
 };
 onlyTextLight.decorators = [ThemeDecorator(Theme.LIGHT)];

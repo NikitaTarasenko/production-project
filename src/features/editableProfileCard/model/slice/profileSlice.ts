@@ -6,7 +6,7 @@ import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';
 
-const initialState:ProfileSchema = {
+const initialState: ProfileSchema = {
     isLoading: false,
     readOnly: true,
     error: undefined,

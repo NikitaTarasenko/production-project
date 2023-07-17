@@ -3,9 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { PageWrapper } from '@/widgets/PageWrapper';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import {
-    Text, TextAlign, TextSize, TextTheme,
-} from '@/shared/ui/Text/Text';
+import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import cls from './MainPage.module.scss';
 
 const MainPage = () => {
@@ -23,24 +21,27 @@ const MainPage = () => {
                     <Text text={t('if')} />
                     <HStack>
                         <Text text={t('roless')} />
-                        <Text theme={TextTheme.PRIMARY_INVERTED} text="'admin'" />
                         <Text
-                            className={cls.spaceAtEnd}
-                            text={t('and p')}
+                            theme={TextTheme.PRIMARY_INVERTED}
+                            text="'admin'"
                         />
-                        <Text theme={TextTheme.PRIMARY_INVERTED} text="'123'." />
+                        <Text className={cls.spaceAtEnd} text={t('and p')} />
+                        <Text
+                            theme={TextTheme.PRIMARY_INVERTED}
+                            text="'123'."
+                        />
                     </HStack>
                     <HStack>
+                        <Text className={cls.spaceAtEnd} text={t('or u')} />
                         <Text
-                            className={cls.spaceAtEnd}
-                            text={t('or u')}
+                            theme={TextTheme.PRIMARY_INVERTED}
+                            text="'user'"
                         />
-                        <Text theme={TextTheme.PRIMARY_INVERTED} text="'user'" />
+                        <Text className={cls.spaceAtEnd} text={t('and p')} />
                         <Text
-                            className={cls.spaceAtEnd}
-                            text={t('and p')}
+                            theme={TextTheme.PRIMARY_INVERTED}
+                            text="'123'."
                         />
-                        <Text theme={TextTheme.PRIMARY_INVERTED} text="'123'." />
                     </HStack>
                     <HStack>
                         <Text
@@ -54,10 +55,8 @@ const MainPage = () => {
                         />
                         <Text text={`${t('few routes')}.`} />
                     </HStack>
-
                 </VStack>
             </VStack>
-
         </PageWrapper>
     );
 };

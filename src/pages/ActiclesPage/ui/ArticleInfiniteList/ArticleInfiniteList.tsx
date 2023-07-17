@@ -2,14 +2,17 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { ArticleList } from '@/entities/Article';
-import { getArticlesPageIsLoading, getArticlesPageView } from '@/pages/ActiclesPage/model/selectors/articlesPageSelector';
+import {
+    getArticlesPageIsLoading,
+    getArticlesPageView,
+} from '@/pages/ActiclesPage/model/selectors/articlesPageSelector';
 import { getArticles } from '@/pages/ActiclesPage/model/slice/articlesPageSlice';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
 
 interface ArticleInfiniteListProps {
-  className?: string;
+    className?: string;
 }
-export const ArticleInfiniteList = memo((props : ArticleInfiniteListProps) => {
+export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     const { className } = props;
     const { t } = useTranslation();
 
@@ -22,7 +25,6 @@ export const ArticleInfiniteList = memo((props : ArticleInfiniteListProps) => {
             <div style={{ marginTop: '30px' }}>
                 <Text size={TextSize.L} title={t('Articles not found')} />
             </div>
-
         );
     }
 
