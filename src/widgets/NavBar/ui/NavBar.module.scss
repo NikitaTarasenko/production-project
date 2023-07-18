@@ -4,18 +4,19 @@
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
-    transition:var(--base-transition);
+    transition: var(--base-transition);
     padding-left: 20px;
 }
 
-.links, .actions {
+.links,
+.actions {
     display: flex;
     float: right;
     margin: 0 20px;
     margin-left: auto;
     color: var(--inverted-primary-color);
 }
- 
+
 .links a {
     text-decoration: none;
     margin: 0 8px;
@@ -24,17 +25,21 @@
 .links a:hover {
     text-decoration: underline;
 }
-.appName{
-    width: var(--sidebar-width);
+
+.appName {
+    width: var(--sidebar-logo);
     margin-left: 15px;
 }
-.createBtn{
+
+.createBtn {
     margin-left: 15px;
 }
-.notif{
+
+.notif {
     fill: var(--inverted-primary-color)
 }
-.notifications{
+
+.notifications {
     min-height: 150px;
     max-height: 300px;
     width: 500px;

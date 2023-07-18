@@ -1,3 +1,20 @@
-.spaceAtEnd{
+.spaceAtEnd {
     margin-right: 5px;
+}
+
+@media(max-width:1255px) {
+    .mobileFlexWrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width: 800px) {
+    .mobileFlexWrap {
+        flex-wrap: wrap;
+    }
+
+    .mainText {
+        width: 80%;
+    }
 }

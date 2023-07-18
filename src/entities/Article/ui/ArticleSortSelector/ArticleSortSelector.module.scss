@@ -1,7 +1,16 @@
-.ArticleSortSelector{
+.ArticleSortSelector {
     display: flex;
     align-items: center;
 }
-.order{
+
+.order {
     margin-left: 8px;
+}
+
+@media(max-width:500px) {
+    .ArticleSortSelector {
+        flex-direction: column;
+
+        gap: 12px;
+    }
 }

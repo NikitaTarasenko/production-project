@@ -1,5 +1,12 @@
-.Tabs{
+.Tabs {
     display: flex;
     gap: 8px;
     cursor: pointer;
+}
+
+@media(max-width: 840px) {
+    .Tabs {
+        flex-wrap: wrap;
+        margin-right: 20px;
+    }
 }

@@ -17,13 +17,13 @@ const MainPage = () => {
                     align={TextAlign.CENTER}
                     title={`${t('Welcome')}!`}
                 />
-                <VStack gap="8">
+                <VStack gap="8" className={cls.mainText}>
                     <Text text={t('if')} />
-                    <HStack>
+                    <HStack className={cls.mobileFlexWrap}>
                         <Text text={t('roless')} />
                         <Text
                             theme={TextTheme.PRIMARY_INVERTED}
-                            text="'admin'"
+                            text="'admin',"
                         />
                         <Text className={cls.spaceAtEnd} text={t('and p')} />
                         <Text
@@ -31,11 +31,11 @@ const MainPage = () => {
                             text="'123'."
                         />
                     </HStack>
-                    <HStack>
+                    <HStack className={cls.mobileFlexWrap}>
                         <Text className={cls.spaceAtEnd} text={t('or u')} />
                         <Text
                             theme={TextTheme.PRIMARY_INVERTED}
-                            text="'user'"
+                            text="'user',"
                         />
                         <Text className={cls.spaceAtEnd} text={t('and p')} />
                         <Text
@@ -43,7 +43,7 @@ const MainPage = () => {
                             text="'123'."
                         />
                     </HStack>
-                    <HStack>
+                    <HStack className={cls.mobileFlexWrap}>
                         <Text
                             text={t('few types')}
                             className={cls.spaceAtEnd}
@@ -51,7 +51,7 @@ const MainPage = () => {
                         <Text
                             className={cls.spaceAtEnd}
                             theme={TextTheme.PRIMARY_INVERTED}
-                            text=" 'admin'"
+                            text=" 'admin',"
                         />
                         <Text text={`${t('few routes')}.`} />
                     </HStack>

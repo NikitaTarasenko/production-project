@@ -35,6 +35,11 @@
          /* 2 */
      }
 
+     @media (max-width:650px) {
+         grid-template-columns: auto;
+         /* 2 */
+     }
+
      .card {
 
          margin-bottom: 20px;

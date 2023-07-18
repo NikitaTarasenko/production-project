@@ -13,7 +13,7 @@ const AboutPage = () => {
             <VStack gap="32">
                 <Text size={TextSize.L} title={t('About page')} />
                 <VStack gap="8">
-                    <Text text="Замість тисячі слів..." />
+                    <Text text={t('About documentation')} />
                     <AppLink
                         className={cls.link}
                         theme={AppLinkTheme.SECONDARY}

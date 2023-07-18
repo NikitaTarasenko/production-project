@@ -2,6 +2,12 @@
     display: flex;
 }
 
+@media(max-width:500px) {
+    .InputWraper {
+        flex-direction: column;
+    }
+}
+
 .input {
     background: transparent;
     border: none;
