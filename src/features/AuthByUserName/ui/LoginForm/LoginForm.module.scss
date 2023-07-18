@@ -2,13 +2,25 @@
     display: flex;
     flex-direction: column;
     width: 400px;
+
+    @media(max-width: 730px) {
+        width: 100%;
+    }
 }
 
-.input{
+.input {
     margin-top: 10px;
+
+    @media(max-width: 500px) {
+        flex-direction: row;
+    }
+
+    @media(max-width: 472px) {
+        flex-direction: column;
+    }
 }
 
-.loginBtn{
+.loginBtn {
     margin-top: 15px;
     margin-left: auto;
 }

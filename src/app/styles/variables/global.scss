@@ -16,6 +16,17 @@
 	--font-line-xl: 48px;
 	--font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
+	@media screen and (max-width: 570px) {
+		--font-size-m: 14px;
+		--font-line-m: 20px;
+
+		--font-size-l: 20px;
+		--font-line-l: 28px;
+
+		--font-size-xl: 28px;
+		--font-line-xl: 36px;
+	}
+
 	/* Transitions */
 	--base-transition: 0.3s all ease-in-out;
 
@@ -26,7 +37,7 @@
 	--sidebar-width-collapsed: 80px;
 
 	@media screen and (max-width: 870px) {
-		--sidebar-width: 150px;
+		--sidebar-width: 130px;
 		--sidebar-logo: 100px;
 	}
 
