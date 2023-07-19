@@ -22,10 +22,14 @@ const MainPage = () => {
                     <HStack className={cls.mobileFlexWrap}>
                         <Text text={t('roless')} />
                         <Text
+                            className={cls.spaceAtEnd}
                             theme={TextTheme.PRIMARY_INVERTED}
                             text="'admin',"
                         />
-                        <Text className={cls.spaceAtEnd} text={t('and p')} />
+                        <Text
+                            className={cls.spaceAtEnd}
+                            text={` ${t('and p')}`}
+                        />
                         <Text
                             theme={TextTheme.PRIMARY_INVERTED}
                             text="'123'."
@@ -34,6 +38,7 @@ const MainPage = () => {
                     <HStack className={cls.mobileFlexWrap}>
                         <Text className={cls.spaceAtEnd} text={t('or u')} />
                         <Text
+                            className={cls.spaceAtEnd}
                             theme={TextTheme.PRIMARY_INVERTED}
                             text="'user',"
                         />
