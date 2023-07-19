@@ -9,7 +9,7 @@ i18n.use(Backend)
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        lng: 'en',
+        // lng: 'en',
         // debug: __IS_DEV__,
         debug: false,
 
