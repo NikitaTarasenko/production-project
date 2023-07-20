@@ -19,6 +19,7 @@ import { loginByUsername } from '../../model/services/loginByUserName/loginByUse
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 
 import cls from './LoginForm.module.scss';
+import { Loader } from '@/shared/ui/Loader/Loader';
 
 export interface LoginFormProps {
     className?: string;
@@ -68,12 +69,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Authorization form')} />
-                {error && (
-                    <Text
-                        text={t('You entered wrong name or password')}
-                        theme={TextTheme.ERROR}
-                    />
-                )}
+                <div className={cls.errorSpace}>
+                    {error && (
+                        <Text
+                            text={t('You entered wrong name or password')}
+                            theme={TextTheme.ERROR}
+                        />
+                    )}
+                </div>
                 <Input
                     autoFocus
                     placeholder={t('Enter username')}
@@ -98,6 +101,11 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     {t('Login')}
                 </Button>
             </div>
+            {isLoading && (
+                <div className={cls.loginFormAbsolute}>
+                    <Loader colorWhite />
+                </div>
+            )}
         </DynamicModuleLoader>
     );
 });

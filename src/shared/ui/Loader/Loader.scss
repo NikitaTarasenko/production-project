@@ -207,3 +207,7 @@
         transform: rotate(360deg);
     }
 }
+
+.rollerWhite div::after {
+    background: #fff;
+}
